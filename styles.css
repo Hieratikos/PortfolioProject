@@ -1,0 +1,530 @@
+/* ------------------------*/ /* ---------->>> GRID <<<-----------*/ /* ------------------------*/
+#grid{
+    margin:0 0 0 30%;
+    padding:11em 5em 10em 0; /*clears the ul of the default value of 40px */
+    background: linear-gradient(to right, rgba(73,44,94,1), rgba(118,82,133,1));
+}
+/* the parallelogram */
+#grid li{
+    list-style-type: none;
+    position: relative;
+    float: left;
+    /* width = padding * 0.866 {Math.sin(60/180*Math.PI):the 60 is the degrees, and Math.sin() returns radians} -- if adding another hex to a row */
+    /* width = 83.571428/numOfHexs for % */
+    width: 27.85714285714286%;
+    /* width: 20.892857%; */
+    /* padding = 96.502804/numOfHexs for bottom value % */
+    padding: 0 0 32.16760145166612% 0;
+    /* padding: 0 0 24.125701% 0; */
+    transform: rotate(-60deg) skewY(30deg);
+    overflow: hidden;
+    visibility: hidden;
+}
+#grid li *{
+    visibility: visible;
+}
+/* the clipped rectangle sitting on the parallelogram */
+#grid li .hexagon{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    transform: skewY(-30deg) rotate(60deg);
+    overflow: hidden;
+}
+#grid li .hexagon img {
+    left: -100%;
+    right:-100%;
+    height:100%;
+    width: auto;
+    margin: 0 auto;
+    transition: all 0.6s linear 0s;
+}
+/* this is for the mobile app pic since it is a "vertical" rectangle */
+.hexVert{
+    margin: 0 0 0 22% !important;
+}
+#grid li:hover img {
+    height: 150%;
+    transform: translateZ(0) translateX(-25%);
+}
+#grid li .hexagon .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+#grid li:hover .overlay {
+    transition: all 0.6s linear 0s;
+    background: rgba(254,180,123,0.6);
+    color: transparent;
+    text-shadow: none;
+}
+#grid li:nth-child(3n+2){
+    margin: 0 1%;
+}
+/* for a row of 4, use (2n+2) */
+/*
+#grid li:nth-child(2n+2){
+    margin:0 1%;
+}
+*/
+/* if adding another hex, add 2 to the cycle size "a" and 1 to the offset "b" of (an+b)
+also, add 2 to margin-top and margin-bottom for every additional hex added to a row
+*/
+#grid li:nth-child(6n+4), #grid li:nth-child(6n+5), #grid li:nth-child(6n+6){
+    margin-top: -6.9285714285%;
+    margin-bottom: -6.9285714285%;
+    transform: translateX(50%) rotate(-60deg) skewY(30deg);
+}
+/*
+#grid li:nth-child(8n+5), #grid li:nth-child(8n+6), #grid li:nth-child(8n+7), #grid li:nth-child(8n+8){
+    margin-top: -4.9285714285%;
+    margin-bottom: -4.9285714285%;
+    transform: translateX(50%) rotate(-60deg) skewY(30deg);
+}
+*/
+/* if adding another hex, shift the even numbered rows over .5% */
+#grid li:nth-child(6n+4){
+    margin-left: 0.5%;
+}
+/*
+#grid li:nth-child(8n+5){
+    margin-left:0.5%;
+}
+*/
+.clear:after{
+    content:"";
+    display: block;
+    clear: both;
+}
+/* ------------------------*/ /* ---------->>> LAYOUT <<<-----------*/ /* ------------------------*/
+body{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    /*z-index: 1;*/
+    top:0;
+    overflow-x: hidden;
+    font-size: 2em !important;
+    margin-bottom: -50px;
+}
+a {
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 30%;
+    z-index: 2;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding: 40px 1%;
+    background: linear-gradient(to right, rgba(53,28,77,1), rgba(73,44,94,1));
+    text-align: center;
+}
+#sidebar__portrait {
+    height: auto;
+    width: 70%;
+    overflow: hidden;
+    margin: 0 auto;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: rgb(255, 126, 95);
+    border-width: 2px;
+}
+#sidebar__portrait img {
+    height: auto;
+    width: 100%;
+}
+#sidebar__social-icons {
+    display: block;
+}
+.sidebar__social-icon:hover {
+    background: #5f5f5f;
+}
+#title {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100px;
+    width: 70%;
+    z-index: 1;
+    box-sizing: border-box;
+    padding: 1% 0 0 0;
+    background: linear-gradient(to right, rgba(73,44,94,1), rgba(118,82,133,1));
+    text-align: center;
+    padding-bottom: 12%;
+}
+#item1, #item2, #item3, #item4, #item5, #item6, #item7, #item8, #item9, #item10, #item11, #item12, #item13, #item14, #item15 {
+    overflow: hidden;
+    z-index: 3;
+    display: block;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 0;
+    width: 100%;
+    background: #FFFFFF;
+    transition: transform 0.6s linear 0s, height 0s linear 0.6s;
+}
+#item1:target, #item2:target, #item3:target, #item4:target, #item5:target, #item6:target, #item7:target, #item8:target,
+#item9:target, #item10:target, #item11:target, #item12:target, #item13:target, #item14:target, #item15:target {
+    height: 100%;
+    overflow: auto;
+    transition: transform 0.6s linear 0s, height 0s linear 0s;
+    transform: translateZ(0) translateX(-100%);
+}
+#contact {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    display: block;
+    height: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 0 0 30%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: linear-gradient(to right, rgba(255, 126, 95,1), rgba(254, 180, 123,1));
+    transition: transform 0.6s linear 0s, height 0s linear 0.6s;
+}
+#contact:target {
+    height: 100%;
+    overflow: auto;
+    transition: transform 0.6s linear 0s, height 0s linear 0s;
+    transform: translateZ(0) translateX(100%);
+}
+#contact form {
+    position: relative;
+    height: auto;
+    width: 80%;
+    margin: 0 auto;
+    background: none;
+    text-align: center;
+}
+#contact label {
+    display: inline-block;
+    width: 20%;
+    padding: 0 10px 0 0;
+    box-sizing: border-box;
+    vertical-align: middle;
+    text-align: right;
+}
+#contact input[type="text"] {
+    height: 30px;
+    width: 50%;
+    border: 0;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+#contact input[type="submit"] {
+    border: 0;
+    margin: 15px 0 15px 20%;
+}
+#contact label[for="message"] {
+    height: 300px;
+    padding: 120px 10px 0 10px;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+#contact textarea {
+    height: 300px;
+    width: 50%;
+    padding: 5px 10px;
+    border: 0;
+    resize: none;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+.left, .right {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    overflow: auto;
+    background: none;
+    border-style: dashed;
+    border-color: #351C4D;
+    border-width: thin;
+}
+.right {
+    left: 50%;
+    overflow: auto;
+}
+.right img {
+    height: auto;
+    width: 100%;
+    margin-left: .1em;
+    margin-top: .1em;
+}
+.rightVert{
+    height:100% !important;
+    width:auto !important;
+    margin-left:25% !important;
+}
+.button {
+    display: inline-block;
+    height: auto;
+    width: auto;
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin: 1em;
+    transition: all 0.3s linear 0s;
+    background: #FEB47B;
+}
+.button:hover {
+    background: #FF7E5F;
+}
+/* ------------------------*/ /* ---------->>> TEXT <<<-----------*/ /* ------------------------*/
+#sidebar p.name, #sidebar p.jobrole {
+    height: auto;
+    width: auto;
+    margin: 0;
+    font-family: 'Special Elite';
+    font-size: 1.2em;
+    line-height: 1.2em;
+    color: #FEB47B;
+}
+
+label {
+    font-family: 'Special Elite';
+    font-size: 1.5em;
+    line-height: 1.5em;
+    color: #351C4D;
+}
+
+#sidebar p.name {
+    margin: 10% 0 0 0;
+    font-family: 'Denk One';
+    color: #FF7E5F;
+    font-size: 1.8em;
+    /*line-height: 1.8em;*/
+}
+#sidebar p.realName{
+    color: #FF7E5F;
+    font-size: .6em;
+}
+p.creds{
+    color: #FF7E5F;
+    font-size: .5em;
+}
+
+.left h2 {
+    font-family: 'Special Elite';
+    text-align: center;
+    font-size: 1.6em;
+    color: #351C4D;
+}
+
+.left p {
+    font-family: 'Special Elite';
+    padding: 0 10px;
+    font-size: 1.4em;
+    margin-left: 15%;
+    margin-right: 15%;
+    color: #351C4D;
+}
+.left p a:hover{
+    background: rgba(254,180,123,0.6);
+}
+
+#title h1 {
+    font-family: 'Denk One', sans-serif;
+    font-size: 3em;
+    font-weight: normal;
+    color: #FF7E5F;
+    text-shadow: -3px 3px 3px #F5AB99;
+}
+
+.button p, input[type="submit"].button {
+    margin: 0;
+    font-family: 'Special Elite';
+    color: #351C4D;
+    font-size: 1em;
+}
+/* Icon Bounce */
+.hvr-icon-bounce {
+    display: inline-block;
+    vertical-align: middle;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    position: relative;
+    padding-right: 1.5em;
+    transition-duration: 0.3s;
+}
+.hvr-icon-bounce:before {
+    position: absolute;
+    /*right: 1em;*/
+    padding: 0 1px;
+    transform: translateZ(0);
+    transition-duration: 0.3s;
+    transition-property: transform;
+    transition-timing-function: ease-out;
+}
+.hvr-icon-bounce:hover:before, .hvr-icon-bounce:focus:before, .hvr-icon-bounce:active:before {
+    transform: scale(1.5);
+    transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+}
+.footImgAwesome{
+    margin-left:0;
+    margin-right:0;
+    height: 1em;
+    width: 1em;
+    font-size: 2.5em !important;
+    padding-right: 1em;
+    padding-left: .5em;
+    color: #FEB47B;
+}
+.footImgAwesome:hover{
+    color: #ff7e61;
+}
+.lineFull {
+    border-bottom: 1px solid #ff7e61;
+    text-align:center;
+    height:1.3em;
+    margin:2em auto;
+    width: 100%;
+    display: block;
+}
+.lineImgPort {
+    padding: 5px 5px;
+    width:50px;
+    height:auto;
+    /*background: #351C4D;*/
+    background: #603f72;
+}
+.lineImgTitle{
+    padding: 5px 5px;
+    width:50px;
+    height:auto;
+    background: #3f2456;
+}
+.modal {
+    display: none; /* Hidden by default */
+    /*position: fixed; !* Stay in place *!*/
+    z-index: 4; /* Sit on top */
+    padding-top: 1%; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background: linear-gradient(to right, rgba(255, 126, 95,1), rgba(254, 180, 123,1));
+}
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 85%;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#myImg:hover {
+    opacity: 0.7;
+}
+#myImgQuake:hover{
+    cursor: pointer;
+}
+#myImgAlg:hover{
+    cursor: pointer;
+}
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#imgCaption {
+    margin: auto;
+    text-align: center;
+    color: #351C4D;
+    padding: 10px;
+    font-family: 'Special Elite';
+    font-size: 2em;
+}
+/* The Close Button */
+.fa-close {
+    position: absolute;
+    top: .5em;
+    right: 1em;
+    color: #351C4D;
+    font-size: 2em !important;
+    font-weight: bold !important;
+    transition: 0.3s;
+}
+.fa-close:hover,
+.fa-close:focus {
+    color: #351C4D;
+    text-decoration: none;
+    cursor: pointer;
+}
+.overlay{
+    background: linear-gradient(to right, rgba(255, 126, 95,1), rgba(254, 180, 123,1));
+    padding: 50% 2% 2% 2%;
+    color: #351C4D;
+    font-family: 'Special Elite', cursive;
+    text-align: center;
+    font-size: x-large;
+    font-weight: 100;
+    text-shadow: -2px 2px 4px #765285;
+}
+.radar {
+    width: auto;
+    height: auto;
+    position: relative;
+    margin-left: auto;
+    margin-top: auto;
+    will-change: transform;
+}
+.radar .pointer {
+    position: absolute;
+    left: -1.5820106%;
+    right: -1.5820106%;
+    top: -1.5820106%;
+    bottom: 50%;
+    transform-origin: 50% 100%;
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    background-image: linear-gradient(135deg,
+    rgba(254, 180, 123, .8) 0%,
+    rgba(254, 180, 123, .02) 70%,
+    rgba(254, 180, 123, 0) 100%
+    );
+    clip-path: polygon(100% 0%, 100% 10%, 50% 100%, 0 100%, 0 0);
+    animation: rotate360 3s infinite linear;
+}
+@keyframes rotate360 {
+    to {
+        transform: rotate(-360deg);
+    }
+}
+.target {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 126, 95,1);
+    border-radius: 5px;
+    opacity: 0;
+    box-shadow: 0px 0px 20px 2px #fff;
+}
+.target-1 {
+    top: 24%;
+    left: 20%;
+    -webkit-animation: 3s blink infinite 2.65s;
+}
+@-webkit-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
