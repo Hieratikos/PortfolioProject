@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- brand colors
+#F5AB99 - Tropical Pink - rgb(245,171,153)
+#FEB47B - Liquid Sunset - rgb(254,180,123)
+#FF7E5F - Heatwave - rgb(255,126,95)
+#765285 - Paradise - rgb(118,82,133)
+#351C4D - Nightfall - rgb(53,28,77)
+-->
+    <meta charset="UTF-8">
+    <title>Javascript Calculator</title>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js"
+            integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Special+Elite|Denk+One|VT323" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
+</head>
+<body>
+<div class="header">
+    <h1>Javascript Calculator</h1>
+    brought to you by
+    <h2>Hieratikos</h2>
+    <table>
+        <tr>
+            <td class="left"><hr class="flared"></td>
+            <td class="center"><img class="logoImg" src="https://res.cloudinary.com/hieratikos/image/upload/v1492361036/NightfallLogo_ndt9em.png"></td>
+            <td class="right"><hr class="flared"></td>
+        </tr>
+    </table>
+</div>
+
+<div id="calcOutput">
+<span id="display"></span>
+</div>
+<div class="text-center" id="calculator">
+    <a class="regButton red" id="deleteAll">AC</a>
+    <a class="regButton red" id="clearEntry">CE</a>
+    <a class="regButton ops" id="/">/</a>
+    <a class="regButton ops" id="*">*</a>
+    <br/>
+    <a class="regButton" id="7">7</a>
+    <a class="regButton" id="8">8</a>
+    <a class="regButton" id="9">9</a>
+    <a class="regButton ops" id="-">-</a>
+    <br/>
+    <a class="regButton" id="4">4</a>
+    <a class="regButton" id="5">5</a>
+    <a class="regButton" id="6">6</a>
+    <a class="regButton ops" id="+">+</a>
+    <br/>
+    <a class="regButton" id="1">1</a>
+    <a class="regButton" id="2">2</a>
+    <a class="regButton" id="3">3</a>
+    <a class="regButton dec" id=".">.</a>
+    <br/>
+    <a class="regButton bigButton" id="0">0</a>
+    <a class="regButton bigButton" id="total">=</a>
+</div>
+
+</body>
+</html>
