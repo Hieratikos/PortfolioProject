@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.js"
+            integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <title>Simon Game</title>
+    <link href="https://fonts.googleapis.com/css?family=Special+Elite|Denk+One" rel="stylesheet">
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <audio id="sound1" src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3" type="audio/mpeg"></audio>
+    <audio id="sound2" src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3" type="audio/mpeg"></audio>
+    <audio id="sound3" src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3" type="audio/mpeg"></audio>
+    <audio id="sound4" src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3" type="audio/mpeg"></audio>
+    <audio id="Buzzer" src="https://res.cloudinary.com/hieratikos/video/upload/v1499615107/WrongBuzzer_p8i0jj.mp3" type="audio/mpeg"></audio>
+    <audio id="WooHoo" src="https://res.cloudinary.com/hieratikos/video/upload/v1499704877/WooHoo_wjansn.mp3" type="audio/mpeg"></audio>
+
+<!--
+#F5AB99 - Tropical Pink - rgb(245,171,153)
+#FEB47B - Liquid Sunset - rgb(254,180,123)
+#FF7E5F - Heatwave - rgb(255,126,95)
+#765285 - Paradise - rgb(118,82,133)
+#351C4D - Nightfall - rgb(53,28,77)
+-->
+
+</head>
+<body class="text-center">
+<h1>Simon Game</h1>
+brought to you by
+<h2>Hieratikos</h2>
+<table>
+    <tr>
+        <td class="left"><hr class="flared"></td>
+        <td class="center"><img class="logoImg" src="https://res.cloudinary.com/hieratikos/image/upload/v1492361036/NightfallLogo_ndt9em.png"></td>
+        <td class="right"><hr class="flared"></td>
+    </tr>
+</table>
+<div class="simonGame">
+    <div class="buttonWrapper">
+        <a class="regButton ul" id="0"></a>
+        <a class="regButton ur" id="1"></a>
+        <a class="regButton ll" id="3"></a>
+        <a class="regButton lr" id="2"></a>
+    </div>
+    <div class="cover">
+        <h1>Simon</h1>
+
+        <div class="row">
+            <div class="col-md-4">
+                <label class="stepDisplay" id="stepCount">0</label>
+            </div>
+            <div class="col-md-4">
+                <div class="checkboxPlayMode">
+                    <input type="checkbox" id="chkPlay" />
+                    <label for="chkPlay"></label>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="checkboxPlayMode">
+                    <input type="checkbox" id="chkStrict" />
+                    <label for="chkStrict"></label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <h3>Count</h3>
+            </div>
+            <div class="col-md-4">
+                <h3>Play</h3>
+            </div>
+            <div class="col-md-4">
+                <h3>Strict Mode</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="checkboxStart">
+                <input type="checkbox" id="chkStart" />
+                <label for="chkStart"></label>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

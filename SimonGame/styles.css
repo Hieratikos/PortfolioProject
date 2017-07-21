@@ -1,0 +1,223 @@
+input[type=checkbox]{
+    visibility: hidden;
+}
+.text-center{
+    font-family: 'Special Elite', sans-serif;
+    color:#351C4D;
+    background-color: #FF7E5F;
+}
+.regButton{
+    width: 400px;
+    height: 400px;
+    display: inline-block;
+    cursor: pointer;
+    border: 20px solid #351C4D;
+    margin: -4px;
+}
+.ul{
+    border-top-left-radius: 100%;
+    background-color: #00a749;
+}
+.ul.bright{
+    background-color: #00ff6f;
+}
+.ur{
+    border-top-right-radius: 100%;
+    background-color: #9f0f16;
+    box-shadow: 10px 10px 5px 0px rgba(53,28,77,0.75);
+}
+.ur.bright{
+    background-color: #ff000d;
+}
+.lr{
+    border-bottom-right-radius: 100%;
+    background-color: #094b8f;
+    box-shadow: 10px 10px 5px 0px rgba(53,28,77,0.75);
+}
+.lr.bright{
+    background-color: #1387ff;
+}
+.ll{
+    border-bottom-left-radius: 100%;
+    background-color: #cca707;
+    box-shadow: 10px 10px 5px 0px rgba(53,28,77,0.75);
+}
+.ll.bright{
+    background-color: #ffcf00;
+}
+.cover{
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    left: 40%;
+    top: 40%;
+    border: 12px solid #351C4D;
+    border-radius: 100%;
+    background-color: #FEB47B;
+    margin-left: -120px;
+    margin-top: -120px;
+}
+.checkboxPlayMode{
+    width:30px;
+    height:30px;
+    background: #765285;
+    border-radius: 100%;
+    position: relative;
+    box-shadow: 0px 1px 3px rgba(53,28,77,.5);
+    margin: auto;
+    margin-top: 10%;
+}
+.checkboxPlayMode label{
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 100px;
+    transition: all .5s ease;
+    cursor: pointer;
+    position: absolute;
+    background: #351C4D;
+    top: 5px;
+    left: 5px;
+    z-index: 1;
+    box-shadow: inset 0px 1px 3px rgba(53,28,77,.5);
+}
+.checkboxPlayMode input[type=checkbox]:checked + label{
+    background: #F5AB99;
+}
+.checkboxStart{
+    width: 120px;
+    height: 40px;
+    background: #351C4D;
+    margin: auto;
+    border-radius: 50px;
+    position: relative;
+}
+.checkboxStart:before{
+    content: "On";
+    position: absolute;
+    top: 12px;
+    left: 13px;
+    height: 2px;
+    font-size: 16px;
+    color: #F5AB99;
+}
+.checkboxStart:after{
+    content: "Off";
+    position: absolute;
+    top: 12px;
+    left: 84px;
+    height: 2px;
+    font-size: 16px;
+    color: #765285;
+}
+.checkboxStart label{
+    display: block;
+    width: 52px;
+    height:22px;
+    border-radius: 50px;
+    transition: all .5s ease;
+    cursor: pointer;
+    position: absolute;
+    top:9px;
+    z-index: 1;
+    left: 12px;
+    background: #765285;
+}
+.checkboxStart input[type=checkbox]:checked + label{
+    left: 60px;
+    background: #F5AB99;
+}
+h1{
+    font-size: 48px;
+    display: block;
+}
+h2{
+    font-family: 'Denk One', sans-serif;
+}
+h3{
+    margin-top: 0px;
+}
+.row{
+    margin: 30px;
+}
+.col-md-4{
+    padding: 0px;
+}
+.stepDisplay{
+    background: #351C4D;
+    border: 2px solid #351C4D;
+    border-radius: 10px;
+    width: 100%;
+    font-size: 30px;
+    color: #F5AB99;
+}
+.face{
+    margin-top: 32%;
+    margin-left:35%;
+    font-size: 410px;
+    transform: translate(-60%,-20%);
+}
+.lineHalf {
+    border-bottom: 1px solid #351C4D;
+    text-align: center;
+    height: 1.8em;
+    margin: 2em auto;
+    width: 50%;
+}
+.lineImgTitle {
+    padding: 5px 5px;
+    width: 50px;
+    height: auto;
+    background: #FF7E5F;
+}
+.simonGame{
+    width: 800px;
+    height: 800px;
+    margin: auto;
+    position:relative;
+    top: 15px;
+}
+.buttonWrapper{
+    position: relative;
+    top: 12px;
+}
+.logoImg{
+    width: 60px;
+    height: auto;
+}
+table{
+    width: 100%;
+}
+td.left{
+    width: 45%;
+    padding-left: 5%;
+    padding-top: 30px;
+}
+tr{
+    /*border: 1px solid black;*/
+}
+td.center{
+    width: 10%;
+}
+td.right{
+    width: 45%;
+    padding-right: 5%;
+    padding-top: 30px;
+}
+hr.flared{
+    height: 30px;
+    border-style: solid;
+    border-color: #351C4D;
+    border-width: 3px 0 0 0;
+    border-radius: 20px;
+}
+hr.flared:before{
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: #351C4D;
+    border-width: 0 0 3px 0;
+    border-radius: 20px;
+}
