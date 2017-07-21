@@ -1,0 +1,88 @@
+body {
+    background-color: #FF7E5F;
+    font-family: 'Special Elite', cursive;
+    font-weight: 400;
+}
+h2{
+    font-family: 'Denk One', sans-serif;
+}
+.title{
+    font-size: 46px;
+}
+.icon {
+    color: #351C4D;
+    position: relative;
+    display: inline-block;
+    font-size: 8em;
+    margin-top:10px;
+}
+.icon-pad{
+    padding: .3em.1em .1em .1em
+}
+.scaleIcon{
+    font-size: .9em;
+    padding-left: 2px;
+}
+img{
+    margin-top:10px;
+}
+img#imgMap{
+    border: 3px solid #351C4D;
+    box-shadow: 10px 10px 5px 0px rgba(53,28,77,0.75);
+}
+.deg{
+    cursor: pointer;
+    color:#765285;
+}
+.deg:hover{
+    color:#FEB47B;
+}
+.header {
+    width: 100%;
+    text-align: center;
+    display: block;
+    /*margin: 15px auto 30px auto;*/
+    margin:2em auto;
+    font-size: .9em;
+    color:#351C4D;
+}
+table{
+    width: 100%;
+}
+td.left{
+    width: 45%;
+    padding-left: 5%;
+    padding-top: 30px;
+}
+tr{
+    /*border: 1px solid black;*/
+}
+td.center{
+    width: 10%;
+}
+td.right{
+    width: 45%;
+    padding-right: 5%;
+    padding-top: 30px;
+}
+hr.flared{
+    height: 30px;
+    border-style: solid;
+    border-color: #351C4D;
+    border-width: 3px 0 0 0;
+    border-radius: 20px;
+}
+hr.flared:before{
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: #351C4D;
+    border-width: 0 0 3px 0;
+    border-radius: 20px;
+}
+.logoImg{
+    width: 60px;
+    height: auto;
+}

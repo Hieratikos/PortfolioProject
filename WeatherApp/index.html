@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather App</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"
+            integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css"
+          integrity="sha256-KcCcakqMaamBrTFaxb9tkrP2iq1X8vUnsm86W8pRcgI=" crossorigin="anonymous" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Special+Elite|Denk+One" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
+</head>
+
+<body>
+<div class="header">
+    <h1 class="title">Weather Report</h1>
+    brought to you by
+    <h2>Hieratikos</h2>
+    <table>
+        <tr>
+            <td class="left"><hr class="flared"></td>
+            <td class="center"><img class="logoImg" src="https://res.cloudinary.com/hieratikos/image/upload/v1492361036/NightfallLogo_ndt9em.png"></td>
+            <td class="right"><hr class="flared"></td>
+        </tr>
+        <tr>
+            <td class="left"> <h1><span id="city"></span><span id="state"></span></h1>
+                <h1><span id="country"></span></h1></td>
+            <td class="center">
+
+                <div class="clear hide">
+                    <p><i class="wi wi-day-sunny icon"></i></p>
+                </div>
+                <div class="night-clear hide">
+                    <p><i class="wi wi-night-clear icon"></i></p>
+                </div>
+                <div class="wind hide">
+                    <p><i class="wi wi-day-windy icon"></i></p>
+                </div>
+                <div class="cloudy hide">
+                    <p><i class="wi wi-cloudy icon icon-pad"></i></p>
+                </div>
+                <div class="partCloudDay hide">
+                    <p><i class="wi wi-day-cloudy icon icon-pad"></i></p>
+                </div>
+                <div class="partCloudNight hide">
+                    <p><i class="wi wi-night-partly-cloudy icon icon-pad"></i></p>
+                </div>
+                <div class="hail hide">
+                    <p><i class="wi wi-hail icon"></i></p>
+                </div>
+                <div class="tornado hide">
+                    <p><i class="wi wi-tornado icon"></i></p>
+                </div>
+                <div class="fog hide">
+                    <p><i class="wi wi-fog icon"></i></p>
+                </div>
+                <div class="rain hide">
+                    <p><i class="wi wi-rain icon"></i></p>
+                </div>
+                <div class="snow hide">
+                    <p><i class="wi wi-snow icon"></i></p>
+                </div>
+                <div class="sleet hide">
+                    <p><i class="wi wi-sleet icon"></i></p>
+                </div>
+                <div class="thunderstorm hide">
+                    <p><i class="wi wi-thunderstorm icon"></i></p>
+                </div>
+
+            </td>
+            <td class="right">
+                <h1><span id="temp"></span>&#176;<span id="unit" class="deg"></span></h1>
+                <h1><span id="desc"></span></h1>
+            </td>
+        </tr>
+    </table>
+    <img id="imgMap" src="" />
+</div>
+
+</body>
+</html>
