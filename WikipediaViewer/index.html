@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"
+            integrity="sha256-+f0njwC9E3IT9zDPry5DSIcGdSxQYezBaStQ4L0ZRfU=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"
+            integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-animate.js"
+            integrity="sha256-BBgufnyROWe7BGMx7tGTfMyfPh/SKbEiz/3M51IDID4=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Wikipedia Viewer</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Special+Elite|Denk+One" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <script src="scripts.js"></script>
+</head>
+<body>
+<div class="header">
+    <h1>Wikipedia Viewer</h1>
+    brought to you by
+    <h2>Hieratikos</h2>
+    <table>
+        <tr>
+            <td class="left"><hr class="flared"></td>
+            <td class="center"><img class="logoImg" src="https://res.cloudinary.com/hieratikos/image/upload/v1492361036/NightfallLogo_ndt9em.png"></td>
+            <td class="right"><hr class="flared"></td>
+        </tr>
+    </table>
+
+</div>
+<main ng-app="WikiApp" ng-controller="WikiCtrl">
+    <div class="wrapper fullHeight" id="search">
+        <a class="search-text" href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">Click here for a random article</a><br/>
+        <form ng-submit="search()">
+            <input type="text" ng-model="searchTxt"/>
+            <div class="eks"></div>
+        </form>
+        <p class="search-text" id="help">Click icon to search</p>
+    </div>
+
+    <div class="container" ng-repeat="result in results">
+
+        <div class="row" >
+
+            <div class="col-md-2 panel-body">
+                <a ng-href="{{ result.page }}" target="_blank" >
+                <img id="thumbNail" ng-src="{{ result.thumb }}" alt="Image Alt Text" />
+                </a>
+            </div>
+
+            <div class="col-md-10 panel-body" >
+                <a ng-href="{{ result.page }}" target="_blank" >
+                <div class="resultTitle">{{ result.title }}</div>
+                </a>
+                <p>{{ result.body }}</p>
+            </div>
+        </div>
+
+    </div>
+
+</main>
+</body>
+</html>
+
+
