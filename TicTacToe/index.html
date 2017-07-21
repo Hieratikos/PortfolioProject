@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.js"
+            integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Special+Elite|Denk+One" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
+    <audio id="Xs_AND_Os" src="https://res.cloudinary.com/hieratikos/video/upload/v1499190074/Xs_AND_Os_zirqmi.mp3" type="audio/mpeg"></audio>
+</head>
+<body>
+<div class="text-center">
+
+    <h1>Tic Tac Toe</h1>
+    brought to you by
+    <h2>Hieratikos</h2>
+    <table class="header">
+        <tr>
+            <td class="left"><hr class="flared"></td>
+            <td class="center"><img class="logoImg" src="https://res.cloudinary.com/hieratikos/image/upload/v1492361036/NightfallLogo_ndt9em.png"></td>
+            <td class="right"><hr class="flared"></td>
+        </tr>
+    </table>
+
+    <h3>
+    <label class="radio-inline"><input type="radio" name="optXYRadio" id="idX" value="X">X's</label>
+    <label class="radio-inline"><input type="radio" name="optXYRadio" id="idO" value="O">O's</label>
+    </h3>
+    <h4>
+    Music:
+    </h4>
+    <h4>
+    <label class="radio-inline"><input type="radio" name="optMusicRadio" id="mON" value="On">On</label>
+    <label class="radio-inline"><input type="radio" name="optMusicRadio" id="mOFF" value="Off">Off</label>
+    </h4>
+    <label id="win">&nbsp;</label>
+    <table>
+        <tr>
+            <td><a class="btn tic" data-x="0" data-y="0" id="0"></a></td>
+            <td><a class="btn tic" data-x="0" data-y="1" id="1"></a></td>
+            <td><a class="btn tic" data-x="0" data-y="2" id="2"></a></td>
+        </tr>
+        <tr>
+            <td><a class="btn tic" data-x="1" data-y="0" id="3"></a></td>
+            <td><a class="btn tic" data-x="1" data-y="1" id="4"></a></td>
+            <td><a class="btn tic" data-x="1" data-y="2" id="5"></a></td>
+        </tr>
+        <tr>
+            <td><a class="btn tic" data-x="2" data-y="0" id="6"></a></td>
+            <td><a class="btn tic" data-x="2" data-y="1" id="7"></a></td>
+            <td><a class="btn tic" data-x="2" data-y="2" id="8"></a></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
