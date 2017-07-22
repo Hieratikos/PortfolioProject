@@ -1,3 +1,21 @@
+/* special-elite-regular - latin */
+@font-face {
+    font-family: 'Special Elite';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Special Elite'), local('SpecialElite-Regular'),
+    url('fonts/special-elite-v6-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('fonts/special-elite-v6-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* denk-one-regular - latin */
+@font-face {
+    font-family: 'Denk One';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Denk One'), local('DenkOne-Regular'),
+    url('fonts/denk-one-v4-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('fonts/denk-one-v4-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
 /* ------------------------*/ /* ---------->>> GRID <<<-----------*/ /* ------------------------*/
 #grid{
     margin:0 0 0 30%;
@@ -342,7 +360,7 @@ p.creds{
     font-size: 3em;
     font-weight: normal;
     color: #FF7E5F;
-    text-shadow: -3px 3px 3px #F5AB99;
+    text-shadow: -3px 3px 3px #351C4D
 }
 
 .button p, input[type="submit"].button {
