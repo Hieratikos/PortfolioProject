@@ -7,7 +7,7 @@ $(document).ready(function () {
     var turns = [];
     var numTurn = 0;
     //change the maxTurnNum to however many turns you want to play
-    var maxTurnNum = 3;
+    var maxTurnNum = 20;
     var pulsed = 0;
     var aFace = "";
     //angry face
@@ -143,7 +143,6 @@ $(document).ready(function () {
    function pulseButton() {
        //if all buttons have been flashed, turn off the repeating interval
        if (curTurnNum === turns.length){
-           console.log("curTurnNum === turns.length");
            isRunning = false;
            clearInterval(pulsed);
        //if not, flash the button, play that button's sound, and set the timeout for unflashing the button

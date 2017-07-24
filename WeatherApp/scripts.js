@@ -67,7 +67,7 @@ $(document).ready(function () {
                 $("#state").html(state);
                 $("#country").html(country);
             });
-             $.getJSON("https://crossorigin.me/https://api.darksky.net/forecast/" + wkey + lat + ',' + lon, function(reply) {
+             $.getJSON("https://api.darksky.net/forecast/" + wkey + lat + ',' + lon, function(reply) {
                 temp = Math.round(reply.currently.temperature);
                 pic = reply.currently.icon;
                 desc = reply.currently.summary;
