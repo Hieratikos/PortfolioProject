@@ -1,7 +1,16 @@
 /**
  * Created by Admin on 4/30/2017.
  */
-
+// (function($) {
+//     $.fn.enableCors = function() {
+//         $.ajaxPrefilter(function(options) {
+//             if(options.crossDomain){
+//                 options.url = "http://cors.corsproxy.io/url=" + options.url;
+//             }
+//         });
+//         return this;
+//     };
+// }(jQuery));
 $(document).ready(function () {
     var lat = ""; var lon = ""; var country = ""; var city = ""; var state = ""; var temp = ""; var pic = "";
     var wkey = "134a2a3a1e2502e7415f6d6502a136ff/";
@@ -39,6 +48,8 @@ $(document).ready(function () {
             //Pico Bolivar (summit), Merida, Venezuela
             // lat = 8.5408552;
             // lon = -71.0487095;
+            //hardcoded below for testing
+            // var map = "https://maps.googleapis.com/maps/api/staticmap?center=34.011776,-118.494807&zoom=13&size=500x500&markers=color:0xFF7E5F|34.011776,-118.494807&key=AIzaSyBPfJzCZ-L3MGzaS3cLCqyV1wbS9pZ5T50";
             var map = "https://maps.googleapis.com/maps/api/staticmap?center=" + lat + "," + lon +
                 "&zoom=13&size=500x500&markers=color:0xFF7E5F|" + lat + "," + lon + "&key=" + lockey;
             $("#imgMap").attr("src", map);
@@ -67,16 +78,33 @@ $(document).ready(function () {
                 $("#state").html(state);
                 $("#country").html(country);
             });
-             $.getJSON("https://api.darksky.net/forecast/" + wkey + lat + ',' + lon, function(reply) {
-                temp = Math.round(reply.currently.temperature);
-                pic = reply.currently.icon;
-                desc = reply.currently.summary;
-                $("#temp").html(temp);
-                $("#desc").html(desc);
-                $("#unit").html("F");
-                 getIcon(pic);
-                //console.log(reply);
+            //had to change the datatype to "jsonp" in order to bypass the CORS error
+            $.ajax({
+                dataType: "jsonp",
+                url: "https://api.darksky.net/forecast/" + wkey + lat + ',' + lon,
+                success: function (reply) {
+                    temp = Math.round(reply.currently.temperature);
+                    pic = reply.currently.icon;
+                    desc = reply.currently.summary;
+                    $("#temp").html(temp);
+                    $("#desc").html(desc);
+                    $("#unit").html("F");
+                    getIcon(pic);
+                },
+                error: function () {
+                    console.log("nope");
+                }
             });
+        //     $.getJSON("https://api.darksky.net/forecast/" + wkey + lat + ',' + lon, function(reply) {
+        //         temp = Math.round(reply.currently.temperature);
+        //         pic = reply.currently.icon;
+        //         desc = reply.currently.summary;
+        //         $("#temp").html(temp);
+        //         $("#desc").html(desc);
+        //         $("#unit").html("F");
+        //          getIcon(pic);
+        //         //console.log(reply);
+        //     });
         });
     }
     $("#unit").click(function () {
