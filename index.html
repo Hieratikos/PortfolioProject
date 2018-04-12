@@ -14,13 +14,15 @@
     <meta charset="UTF-8">
     <meta name="description" content="Portfolio for Jordi Combs">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hieratikos' Portfolio</title>
+    <title>Jordi Combs Portfolio</title>
     <link rel="stylesheet" type="text/css" href="styles/bootstrap3.3.7.min.css">
     <link rel="stylesheet" type="text/css" href="styles/homestyles.css">
+    <link rel="icon" href="images/camel-icon.png" type="image/x-icon">
     <script async type="text/javascript" src="scripts/fontawesome.js"></script>
     <script type="text/javascript" src="scripts/jquery-3.2.1.min.js"></script>
     <script async type="text/javascript" src="scripts/bootstrap3.3.7.min.js"></script>
     <script async type="text/javascript" src="scripts/homescript.js"></script>
+
 </head>
 <body>
 <!-- This is the modal window for the displayed images -->
@@ -40,7 +42,7 @@
     <p class="realName">(a.k.a. Jordi Combs)</p>
     <p class="creds">MCT, MCSD.NET, MCSD-VB6, MCPD, MCTS, MCAD, M-CIW-D, iNet+, Network+</p>
 
-    <p class="jobrole">ESL Instructor<br/>Web Developer<br/>Technical Trainer<br/>Non-Profit Manager<br/>camelLocator</p>
+    <p class="jobrole">ESL Instructor<br/>Web Developer<br/>Technical Trainer<br/>camelLocator
     <div class="lineFull">
         <img class="lineImgTitle" src="images/HeatwaveLogo.webp">
     </div>
@@ -59,7 +61,7 @@
 
 <div id="title">
     <h1>FRONT END PORTFOLIO</h1>
-    <p class="creds">This site has only been tested on Chrome.</p>
+    <p class="creds">This site has only been tested on Chrome. Media queries under construction.</p>
     <div class="lineFull">
         <img class="lineImgPort" src="images/HeatwaveLogo.webp">
     </div>
@@ -346,16 +348,16 @@
 <div id="contact">
     <a href="#"><div class="button"><p>&lt;&lt; CLOSE</p></div></a>
     <form method="post" id="emailform" name="myemailform" action="test.php">
-        <label for="name_id">Your Name</label><input type="text" id="name_id" name="name_name" placeholder="VIP" required/>
+        <label for="name_id">Your Name</label><input type="text" id="name_id" name="name_name" autocomplete="fullname" placeholder="VIP" required/>
         <br />
         <br />
-        <label for="email_id">Your Email</label><input type="text" id="email_id" name="email_name" placeholder="john_doe@example.com" required/>
+        <label for="email_id">Your Email</label><input type="text" id="email_id" name="email_name" autocomplete="email" placeholder="john_doe@example.com" required/>
         <br />
         <br />
-        <label for="subject_id">Subject</label><input type="text" id="subject_id" name="subject_name" placeholder="[Subject]" required/>
+        <label for="subject_id">Subject</label><input type="text" id="subject_id" name="subject_name" autocomplete="subject" placeholder="[Subject]" required/>
         <br />
         <br />
-        <label for="message_id">Message</label><textarea form="emailform" id="message_id" name="message_name" placeholder="What's up?" required></textarea>
+        <label for="message_id">Message</label><textarea form="emailform" id="message_id" name="message_name" autocomplete="message" placeholder="What's up?" required></textarea>
         <br />
         <input type="submit" class="button" name="submit" value="submit"/>
     </form>

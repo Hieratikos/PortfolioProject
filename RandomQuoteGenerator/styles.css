@@ -180,8 +180,9 @@ hr.flared{
     border-color: #351C4D;
     border-width: 3px 0 0 0;
     border-radius: 20px;
+    overflow:visible;
 }
-hr.flared:before{
+hr.flared::before{
     display: block;
     content: "";
     height: 30px;
