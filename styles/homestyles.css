@@ -1,3 +1,6 @@
+html {
+    background: linear-gradient(to right, rgba(53,28,77,1), rgba(118,82,133,1));
+}
 /* special-elite-regular - latin */
 @font-face {
     font-family: 'Special Elite';
@@ -19,7 +22,7 @@
 /* ------------------------*/ /* ---------->>> GRID <<<-----------*/ /* ------------------------*/
 #grid{
     margin:0 0 0 30%;
-    padding:11em 5em 10em 0; /*clears the ul of the default value of 40px */
+    padding: 11em 5em 10em 0; /*clears the ul of the default value of 40px */
     background: linear-gradient(to right, rgba(73,44,94,1), rgba(118,82,133,1));
 }
 /* the parallelogram */
@@ -531,7 +534,7 @@ p.creds{
     background-color: rgba(255, 126, 95,1);
     border-radius: 5px;
     opacity: 0;
-    box-shadow: 0px 0px 20px 2px #fff;
+    box-shadow: 0 0 20px 2px #fff;
 }
 .target-1 {
     top: 24%;
