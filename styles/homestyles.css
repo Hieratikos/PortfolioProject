@@ -22,7 +22,8 @@ html {
 /* ------------------------*/ /* ---------->>> GRID <<<-----------*/ /* ------------------------*/
 #grid{
     margin:0 0 0 30%;
-    padding: 11em 5em 10em 0; /*clears the ul of the default value of 40px */
+    /*padding: 11em 5em 10em 0; !*clears the ul of the default value of 40px *!*/
+    padding: 14% 5em 10em 0;
     background: linear-gradient(to right, rgba(73,44,94,1), rgba(118,82,133,1));
 }
 /* the parallelogram */
@@ -176,7 +177,8 @@ a:hover{
     position: fixed;
     top: 0;
     right: 0;
-    height: 100px;
+    /*height: 100px;*/
+    height: 30%;
     width: 70%;
     z-index: 1;
     box-sizing: border-box;
@@ -311,7 +313,7 @@ a:hover{
     width: auto;
     margin: 0;
     font-family: 'Special Elite';
-    font-size: 1.2em;
+    font-size: 2.2vmin;
     line-height: 1.2em;
     color: #FEB47B;
 }
@@ -327,7 +329,7 @@ label {
     margin: 10% 0 0 0;
     font-family: 'Denk One';
     color: #FF7E5F;
-    font-size: 1.8em;
+    font-size: 4.5vmin;
     /*line-height: 1.8em;*/
 }
 #sidebar p.realName{
@@ -336,7 +338,7 @@ label {
 }
 p.creds{
     color: #FF7E5F;
-    font-size: .5em;
+    font-size: 1.0vmin;
 }
 
 .left h2 {
@@ -360,7 +362,7 @@ p.creds{
 
 #title h1 {
     font-family: 'Denk One', sans-serif;
-    font-size: 3em;
+    font-size: 5vmax;
     font-weight: normal;
     color: #FF7E5F;
     text-shadow: -3px 3px 3px #351C4D
@@ -494,7 +496,8 @@ p.creds{
     color: #351C4D;
     font-family: 'Special Elite', cursive;
     text-align: center;
-    font-size: x-large;
+    /*font-size: x-large;*/
+    font-size: 1.5vmax;
     font-weight: 100;
     text-shadow: -2px 2px 4px #765285;
 }
