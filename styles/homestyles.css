@@ -21,10 +21,10 @@ html {
 }
 /* ------------------------*/ /* ---------->>> GRID <<<-----------*/ /* ------------------------*/
 #grid{
-    margin:0 0 0 30%;
+    margin: 0 0 0 30%;
     /*padding: 11em 5em 10em 0; !*clears the ul of the default value of 40px *!*/
     padding: 14% 5em 10em 0;
-    background: linear-gradient(to right, rgba(73,44,94,1), rgba(118,82,133,1));
+     background: linear-gradient(to right, rgba(73,44,94,1), rgba(118,82,133,1));
 }
 /* the parallelogram */
 #grid li{
