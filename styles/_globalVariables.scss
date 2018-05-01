@@ -1,0 +1,16 @@
+@import "normalize";
+@import url('https://fonts.googleapis.com/css?family=Montserrat+Alternates:400,700');
+
+@font-face {
+  font-family: "Cuadradex";
+  src: url("../fonts/Cuadradex.ttf");
+}
+$NIGHTFALL: #351C4D;
+$PARADISE: #765285;
+$HEATWAVE: #FF7E5F;
+$SUNSET: #FEB47B;
+$TROPICALPINK: #F5AB99;
+$LSpace: .1rem;
+$embase: 62.5%;
+$fontBody: 'Montserrat Alternates', sans-serif;
+$fontHeadings: "Cuadradex", sans-serif;

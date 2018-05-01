@@ -1,25 +1,27 @@
 @import "templateProjectPageHeader";
-html {
+html, body {
     background: linear-gradient(to right, rgba(53,28,77,1), rgba(118,82,133,1));
+    font-family: $fontBody;
 }
 /* special-elite-regular - latin */
-@font-face {
-    font-family: 'Special Elite';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Special Elite'), local('SpecialElite-Regular'),
-    url('../fonts/special-elite-v6-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-    url('../fonts/special-elite-v6-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-/* denk-one-regular - latin */
-@font-face {
-    font-family: 'Denk One';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Denk One'), local('DenkOne-Regular'),
-    url('../fonts/denk-one-v4-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-    url('../fonts/denk-one-v4-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
+//@font-face {
+//    font-family: 'Special Elite';
+//    font-style: normal;
+//    font-weight: 400;
+//    src: local('Special Elite'), local('SpecialElite-Regular'),
+//    url('../fonts/special-elite-v6-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+//    url('../fonts/special-elite-v6-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+//}
+///* denk-one-regular - latin */
+//@font-face {
+//    font-family: 'Denk One';
+//    font-style: normal;
+//    font-weight: 400;
+//    src: local('Denk One'), local('DenkOne-Regular'),
+//    url('../fonts/denk-one-v4-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+//    url('../fonts/denk-one-v4-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+//}
+
 /* ------------------------*/ /* ---------->>> GRID <<<-----------*/ /* ------------------------*/
 #grid{
     margin: 0 0 0 30%;
@@ -313,7 +315,7 @@ a:hover{
     height: auto;
     width: auto;
     margin: 0;
-    font-family: 'Special Elite';
+    font-family: $fontHeadings;
     font-size: 2.2vmin;
     line-height: 1.2em;
     color: #FEB47B;
@@ -328,7 +330,7 @@ label {
 
 #sidebar p.name {
     margin: 10% 0 0 0;
-    font-family: 'Denk One';
+    font-family: $fontHeadings;
     color: #FF7E5F;
     font-size: 4.5vmin;
     /*line-height: 1.8em;*/
@@ -358,7 +360,7 @@ p.creds{
 }
 
 #title h1 {
-    font-family: 'Denk One', sans-serif;
+    font-family: $fontHeadings;
     font-size: 5vmax;
     font-weight: normal;
     color: #FF7E5F;
@@ -367,7 +369,7 @@ p.creds{
 
 .button p, input[type="submit"].button {
     margin: 0;
-    font-family: 'Special Elite';
+    font-family: $fontBody;
     color: #351C4D;
     font-size: 1em;
 }
@@ -491,7 +493,7 @@ p.creds{
     background: linear-gradient(to right, rgba(255, 126, 95,1), rgba(254, 180, 123,1));
     padding: 50% 2% 2% 2%;
     color: #351C4D;
-    font-family: 'Special Elite', cursive;
+    font-family: $fontBody;
     text-align: center;
     /*font-size: x-large;*/
     font-size: 1.5vmax;

@@ -300,7 +300,7 @@ template {
 
 @font-face {
   font-family: "Cuadradex";
-  src: url("fonts/Cuadradex.ttf"); }
+  src: url("../fonts/Cuadradex.ttf"); }
 #tempHeader {
   color: #351C4D;
   text-align: center;
@@ -346,23 +346,11 @@ template {
       border-width: 0 0 3px 0;
       border-radius: 20px; }
 
-html {
-  background: linear-gradient(to right, #351c4d, #765285); }
+html, body {
+  background: linear-gradient(to right, #351c4d, #765285);
+  font-family: "Montserrat Alternates", sans-serif; }
 
 /* special-elite-regular - latin */
-@font-face {
-  font-family: 'Special Elite';
-  font-style: normal;
-  font-weight: 400;
-  src: local("Special Elite"), local("SpecialElite-Regular"), url("../fonts/special-elite-v6-latin-regular.woff2") format("woff2"), url("../fonts/special-elite-v6-latin-regular.woff") format("woff");
-  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
-/* denk-one-regular - latin */
-@font-face {
-  font-family: 'Denk One';
-  font-style: normal;
-  font-weight: 400;
-  src: local("Denk One"), local("DenkOne-Regular"), url("../fonts/denk-one-v4-latin-regular.woff2") format("woff2"), url("../fonts/denk-one-v4-latin-regular.woff") format("woff");
-  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
 /* ------------------------*/
 /* ---------->>> GRID <<<-----------*/
 /* ------------------------*/
@@ -662,7 +650,7 @@ a:hover {
   height: auto;
   width: auto;
   margin: 0;
-  font-family: 'Special Elite';
+  font-family: "Cuadradex", sans-serif;
   font-size: 2.2vmin;
   line-height: 1.2em;
   color: #FEB47B; }
@@ -675,7 +663,7 @@ label {
 
 #sidebar p.name {
   margin: 10% 0 0 0;
-  font-family: 'Denk One';
+  font-family: "Cuadradex", sans-serif;
   color: #FF7E5F;
   font-size: 4.5vmin;
   /*line-height: 1.8em;*/ }
@@ -702,7 +690,7 @@ p.creds {
   background: rgba(254, 180, 123, 0.6); }
 
 #title h1 {
-  font-family: 'Denk One', sans-serif;
+  font-family: "Cuadradex", sans-serif;
   font-size: 5vmax;
   font-weight: normal;
   color: #FF7E5F;
@@ -710,7 +698,7 @@ p.creds {
 
 .button p, input[type="submit"].button {
   margin: 0;
-  font-family: 'Special Elite';
+  font-family: "Montserrat Alternates", sans-serif;
   color: #351C4D;
   font-size: 1em; }
 
@@ -840,7 +828,7 @@ p.creds {
   background: linear-gradient(to right, #ff7e5f, #feb47b);
   padding: 50% 2% 2% 2%;
   color: #351C4D;
-  font-family: 'Special Elite', cursive;
+  font-family: "Montserrat Alternates", sans-serif;
   text-align: center;
   /*font-size: x-large;*/
   font-size: 1.5vmax;
