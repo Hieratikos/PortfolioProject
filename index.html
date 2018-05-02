@@ -1,27 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!--brand colors-->
-<!--#F5AB99 - Tropical Pink - rgb(245,171,153)-->
-<!--#FEB47B - Liquid Sunset - rgb(254,180,123)-->
-<!--#FF7E5F - Heatwave - rgb(255,126,95)-->
-<!--#765285 - Paradise - rgb(118,82,133)-->
-<!--#351C4D - Nightfall - rgb(53,28,77)-->
-<!--#492c5e - 70% gradient from Nightfall to Paradise - rgb(73,44,94)-->
-<!--#603f72 - halfway b/t 70% gradient and Paradise - rgb(96,63,114) - background for logo in title-->
-<!--#3f2456 - halfway across the sidebar gradient - rgb(63,36,86)-->
-
     <meta charset="UTF-8">
-    <meta name="description" content="Portfolio for Jordi Combs">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>jordiCombs Portfolio</title>
-    <link rel="stylesheet" type="text/css" href="styles/bootstrap3.3.7.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Title</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+          crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="styles/homestyles.css">
-    <link rel="icon" href="images/camel-icon.png" type="image/x-icon">
+
     <script defer type="text/javascript" src="scripts/fontawesome.js"></script>
     <script type="text/javascript" src="scripts/jquery-3.2.1.min.js"></script>
-    <script defer type="text/javascript" src="scripts/bootstrap3.3.7.min.js"></script>
+    <script type="text/javascript" src="scripts/breakpoints.js"></script>
+    <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+            integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+            crossorigin="anonymous"></script>
     <script defer type="text/javascript" src="scripts/homescript.js"></script>
+
+    <script>
+        // $(function() {
+        //
+        //
+        //     $(window).bind('exitBreakpoint320',function() {
+        //         $('#log').append('<p>Exiting 320 breakpoint</p>');
+        //     });
+        //     $(window).bind('enterBreakpoint320',function() {
+        //         $('#log').append('<p>Entering 320 breakpoint</p>');
+        //     });
+        //
+        //     $(window).bind('exitBreakpoint480',function() {
+        //         $('#log').append('<p>Exiting 480 breakpoint</p>');
+        //     });
+        //     $(window).bind('enterBreakpoint480',function() {
+        //         $('#log').append('<p>Entering 480 breakpoint</p>');
+        //     });
+        //     $(window).bind('exitBreakpoint768',function() {
+        //         $('#log').append('<p>Exiting 768 breakpoint</p>');
+        //     });
+        //     $(window).bind('enterBreakpoint768',function() {
+        //         $('#log').append('<p>Entering 768 breakpoint</p>');
+        //     });
+        //
+        //     $(window).bind('exitBreakpoint1024',function() {
+        //         $('#log').append('<p>Exiting 1024 breakpoint</p>');
+        //     });
+        //     $(window).bind('enterBreakpoint1024',function() {
+        //         $('#log').append('<p>Entering 1024 breakpoint</p>');
+        //     });
+        //
+        //     $(window).setBreakpoints();
+        //
+        //     $('#distinct').bind('click',function() {
+        //         $(window).resetBreakpoints();
+        //         $(window).setBreakpoints({distinct: $('#distinct').is(":checked")});
+        //         $(window).resize();
+        //     });
+        //
+        // });
+    </script>
 
 </head>
 <body>
@@ -32,331 +70,355 @@
     <div id="imgCaption"></div>
 </div>
 
-<div id="sidebar">
-    <div id="sidebar__portrait">
-        <div class="radar"><div class="target target-1"></div> <div class="pointer" id="radarTarget"></div>
-        <img id="imgCamel" src="images/CamelColorizedFlip.webp" alt="Master of Camels"/>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <header id="title" class="display-1">frontEndPortfolio</header>
         </div>
     </div>
-    <p class="name">jordiCombs</p>
-    <p class="creds">MCT, MCSD.NET, MCSD-VB6, MCPD, MCTS, MCAD, M-CIW-D, iNet+, Network+</p>
-
-    <p class="jobrole">frontEndWebDeveloper<br/>technicalTrainer<br/>eslInstructor<br/>camelLocator
-    <div class="lineFull">
+    <div class="row rowLogo">
+        <div class="lineLeft">&nbsp;</div>
         <img class="lineImgTitle" src="images/HeatwaveLogo.webp">
-    </div>
-    <div id="sidebar__social-icons">
-        <a href="https://github.com/Hieratikos" target="_blank"><i class="fa fa-github fa-3x footImgAwesome hvr-icon-bounce" aria-hidden="true"></i></a>
-        <a href="https://www.linkedin.com/in/jordi-combs-24966815/" target="_blank"><i class="fa fa-linkedin-square fa-3x footImgAwesome hvr-icon-bounce" aria-hidden="true"></i></a>
-        <a href="https://www.freecodecamp.com/hieratikos" target="_blank"><i class="fa fa-free-code-camp fa-3x footImgAwesome hvr-icon-bounce" aria-hidden="true"></i></a>
+        <div class="lineRight">&nbsp;</div>
     </div>
 
-    <a href="#contact">
-        <div class="button">
-            <p>CONTACT ME</p>
+    <div class="row">
+        <div id="sidebar" class="col-md-3 col-sm-4 col-xs-3">
+            <!-- Me & My Camel in Pushkar, Rajasthan -->
+            <div id="sidebar__portrait">
+                <div class="radar"><div class="target target-1"></div> <div class="pointer" id="radarTarget"></div>
+                    <img id="imgCamel" src="images/CamelColorizedFlip.webp" alt="Master of Camels"/>
+                </div>
+            </div>
+
+            <!--It's all about me....-->
+            <p class="name">jordiCombs</p>
+            <p class="creds">MCT, MCSD.NET, MCSD-VB6, MCPD, MCTS, MCAD, M-CIW-D, iNet+, Network+</p>
+            <p class="jobrole">frontEndWebDeveloper<br/>technicalTrainer<br/>eslInstructor<br/>camelLocator
+
+            <!--The line-splitting hex logo-->
+            <div class="row rowLogo">
+                <div class="lineLeft">&nbsp;</div>
+                <img class="lineImgTitle" src="images/HeatwaveLogo.webp">
+                <div class="lineRight">&nbsp;</div>
+            </div>
+
+            <!--<div id="sidebar_social-icons">-->
+            <div class="row">
+                <div class="col sidebar_social-icons">
+                <a href="https://github.com/Hieratikos" target="_blank">
+                    <span class="faSize"><i class="fa fa-github"></i></span>
+                </a>
+                </div>
+                <div class="col sidebar_social-icons">
+                <a href="https://www.linkedin.com/in/jordi-combs-24966815/" target="_blank">
+                    <span class="faSize"><i class="fa fa-linkedin-square"></i></span>
+                </a>
+                </div>
+                <div class="col sidebar_social-icons">
+                    <a href="#contact">
+                        <span class="faSize"><i class="fa fa-envelope"></i></span>
+                    </a>
+                </div>
+            </div>
         </div>
-    </a>
-</div>
 
-//top-level header
-<div id="title">
-    <h1>frontEndPortfolio</h1>
-    <p class="creds">This site has only been tested on Chrome. Media queries under construction.</p>
-    <div class="lineFull">
-        <img class="lineImgPort" src="images/HeatwaveLogo.webp">
-    </div>
-</div>
-<br/>
-<ul id="grid" class="clear">
-    <li>
-        <a href="#item1">
-        <div class="hexagon">
-            <img src="images/EarthquakeMapColorized.webp" alt="Earthquake Map"/>
-            <div class="overlay">Data Visualization Earthquake Map</div>
+        <!-- The hex's -->
+        <div class="col-md-9 col-sm-8 col-xs-9">
+            <!--everything below represents the main content area for each hex display-->
+            <ul id="grid" class="clear">
+                <li>
+                    <a href="#item1">
+                        <div class="hexagon">
+                            <img src="images/EarthquakeMapColorized.webp" alt="Earthquake Map"/>
+                            <div class="overlay">Data Visualization Earthquake Map</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#item2">
+                        <div class="hexagon">
+                            <img src="images/ShortestPathColorized.webp" alt="Shortest Path Algorithm"/>
+                            <div class="overlay">Shortest Path Algorithm</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#item3">
+                        <div class="hexagon">
+                            <img class="hexVert" src="images/MobileSiteColorized.webp" alt="Mobile Web Site"/>
+                            <div class="overlay">ESL Mobile Movie Site</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#item4">
+                        <div class="hexagon">
+                            <img src="images/RandomQuotesColorized.webp" alt="Random Quote Generator"/>
+                            <div class="overlay">Random Quote Generator</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#item5">
+                        <div class="hexagon">
+                            <img src="images/WeatherColorized.webp" alt="Weather Report"/>
+                            <div class="overlay">Weather Report</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#item6">
+                        <div class="hexagon">
+                            <img src="images/WikipediaColorized.webp" alt="Wikipedia Page Viewer"/>
+                            <div class="overlay">Wikipedia Page Viewer</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#item7">
+                        <div class="hexagon">
+                            <img src="images/JSCalcColorized.webp" alt="Javascript Calculator"/>
+                            <div class="overlay">Javascript Calculator</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#item8">
+                        <div class="hexagon">
+                            <img src="images/TwitchTVColorized.webp" alt="Twitch TV Viewer"/>
+                            <div class="overlay">Twitch TV Viewer</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#item9">
+                        <div class="hexagon">
+                            <img src="images/PomodoroColorized.webp" alt="Pomodoro Hourglass" />
+                            <div class="overlay">Pomodoro Clock</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#item10">
+                        <div class="hexagon">
+                            <img src="images/TicTacToeColorized.webp" alt="Tic Tac Toe" />
+                            <div class="overlay">Tic Tac Toe</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#item11">
+                        <div class="hexagon">
+                            <img src="images/SimonColorized.webp" alt="Simon Game" />
+                            <div class="overlay">Simon Game</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#item12">
+                        <div class="hexagon">
+                            <img src="images/RGBColorized.webp" alt="RGB Game" />
+                            <div class="overlay">RGB Picker Game</div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+
+            <div id="item1">
+                <div class="left">
+                    <a href="#"><div class="button"><p>CLOSE &gt;&gt;</p></div></a>
+                    <h2>Earthquake Map</h2>
+                    <p>
+                        This map is a simple data visualization project that displays real-time earthquake data from
+                        an Atom feed at the <a href="https://earthquake.usgs.gov/" target="_blank">U.S. Geological Society</a>. The map(s) come
+                        from <a href="http://unfoldingmaps.org/" target="_blank">Unfolding Maps</a>, and the legend and graphics are made with
+                        <a href="https://processing.org/" target="_blank">Processing 2.0</a>. This project was part of the coursework of a Coursera
+                        Java class called <a href="https://www.coursera.org/learn/data-structures-optimizing-performance" target="_blank">Data Structures and Performance</a>
+                        offered by UCSD.
+                    </p>
+                </div>
+
+                <div class="right">
+                    <img id="myImgQuake" src="images/EarthquakeMap_half.webp" alt="Earthquake Map"/>
+                </div>
+            </div>
+
+            <div id="item2">
+                <div class="left">
+                    <a href="#"><div class="button"><p>CLOSE &gt;&gt;</p></div></a>
+                    <h2>Shortest Path Algorithm</h2>
+                    <p>
+                        This was another project for a Coursera class from UCSD called <a href="https://www.coursera.org/learn/advanced-data-structures" target="_blank">
+                        Advanced Data Structures in Java</a>. Google Maps were used to extract data points that were parsed into intersection points, and shortest
+                        path algorithms were used to find the shortest route between two points. Algorithms for this project included BFS, Dijkstra, and A*.
+                    </p>
+                    <p>I also created a modified version that took speed limits into account and generated the fastest route between two points. Since speed
+                        limit data is unavailable for free, I identified road segments as per
+                        <a href="http://wiki.openstreetmap.org/wiki/Main_Page" target="_blank">Open Street Map</a> and assigned approximate speeds per segment.
+                    </p>
+                </div>
+                <div class="right">
+                    <img id="myImgAlg" src="images/ShortestPath_half.webp" alt="Shortest Path Algorithm"/>
+                </div>
+            </div>
+            <div id="item3">
+                <div class="left">
+                    <a href="#"><div class="button"><p>CLOSE &gt;&gt;</p></div></a>
+                    <h2>ESL Mobile Movie Site</h2>
+                    <p>
+                        One of my careers is ESL, and I currently teach at Santa Monica College. I started a movie club for the ESL students, and after I realized my
+                        study guides reached upwards of 30 printed pages per movie per person, I decided to save a forest and put the guides in a mobile web site.</p>
+                    <p>Since all of my students are surgically attached to their cellphones anyway, and since this was a great way to practice my skills, the web site
+                        seemed like a great practical solution. My students and my colleagues both gave it positive reviews. Clicking on the image will redirect you
+                        to <a href="http://rebrand.ly/ESLMovies" target="_blank">the actual site</a>, which is best viewed on a mobile device. Each movie image links to that movie's study guide.</p>
+                    <p>The site is mostly static HTML with some minor CSS and Bootstrap navigation. It is clean, user-friendly, and easy to read.</p>
+                </div>
+                <div class="right">
+                    <a href="http://rebrand.ly/ESLMovies"  target="_blank">
+                        <img class="rightVert" src="images/MobileSite.webp" alt="Mobile Site"/>
+                    </a>
+                </div>
+            </div>
+            <div id="item4">
+                <div class="left">
+                    <a href="#"><div class="button"><p>CLOSE &gt;&gt;</p></div></a>
+                    <h2>Random Quote Generator</h2>
+                    <p>
+                        A Random Quote Generator project as part of the projects for freeCodeCamp. The logic is a combination of AJAX and jQuery. The quote content
+                        comes from an API from <a href="https://quotesondesign.com" target="_blank">https://quotesondesign.com</a>.
+                    </p>
+                </div>
+                <div class="right">
+                    <a href="RandomQuoteGenerator/index.html" target="_blank">
+                        <img src="images/RandomQuotes.webp" alt="Random Quote Generator"/>
+                    </a>
+                </div>
+            </div>
+            <div id="item5">
+                <div class="left">
+                    <a href="#"><div class="button"><p>CLOSE &gt;&gt;</p></div></a>
+                    <h2>Weather Report</h2>
+                    <p>
+                        A Weather Report project as part of the projects for freeCodeCamp. The app makes calls to the Google geocode and staticmap API's. The
+                        location's longitude and latitude are then passed to the API at <a href="https://darksky.net/" target="_blank">https://darksky.net/</a>
+                        to get the weather report for that location.
+                    </p>
+                </div>
+                <div class="right">
+                    <a href="WeatherApp/index.html" target="_blank">
+                        <img src="images/Weather.webp" alt="Weather Report"/>
+                    </a>
+                </div>
+            </div>
+            <div id="item6">
+                <div class="left">
+                    <a href="#"><div class="button"><p>CLOSE &gt;&gt;</p></div></a>
+                    <h2>Wikipedia Page Viewer</h2>
+                    <p>
+                        A Wikipedia Page Viewing project as part of the projects for freeCodeCamp. I used AngularJS for the calls to the Wikipedia API. The user can
+                        either click the link to get a random page or use the search engine to get the top ten results of a custom search.
+                        Results are displayed with thumbnail images (if they exist on the Wikipedia page) in a sequence of custom outputData objects.
+                    </p>
+                </div>
+                <div class="right">
+                    <a href="WikipediaViewer/index.html" target="_blank">
+                        <img src="images/Wikipedia.webp" alt="Wikipedia Page Viewer"/>
+                    </a>
+                </div>
+            </div>
+            <div id="item7">
+                <div class="left">
+                    <a href="#"><div class="button"><p>CLOSE &gt;&gt;</p></div></a>
+                    <h2>Javascript Calculator</h2>
+                    <p>
+                        A Javascript Calculator project as part of the projects for freeCodeCamp. The code is simple jQuery. Very few bells and whistles. If I wanted
+                        to make a more robust scientific calculator, I wouldn't use floating-point-unfriendly JavaScript.
+                    </p>
+                </div>
+                <div class="right">
+                    <a href="JavaScriptCalculator/index.html" target="_blank">
+                        <img src="images/JSCalc.webp" alt="Javascript Calculator"/>
+                    </a>
+                </div>
+            </div>
+            <div id="item8">
+                <div class="left">
+                    <a href="#"><div class="button"><p>CLOSE &gt;&gt;</p></div></a>
+                    <h2>Twitch TV Viewer</h2>
+                    <p>
+                        A Twitch TV API project as part of the projects for freeCodeCamp, and I only completed the minimum number of user stories since
+                        the API is so limited in scope.
+                    </p>
+                </div>
+                <div class="right">
+                    <a href="TwitchViewer/index.html" target="_blank">
+                        <img src="images/TwitchTV.webp" alt="Twitch TV Viewer"/>
+                    </a>
+                </div>
+            </div>
+            <div id="item9">
+                <div class="left">
+                    <a href="#"><div class="button"><p>CLOSE &gt;&gt;</p></div></a>
+                    <h2>Pomodoro Clock</h2>
+                    <p>
+                        A Pomodoro Clock project as part of the projects for freeCodeCamp. I wanted to make it more visually appealing than a straightforward
+                        clock, so I added CSS animations to create an hourglass effect. It was harder than I expected!
+                    </p>
+                </div>
+                <div class="right">
+                    <a href="PomodoroClock/index.html" target="_blank">
+                        <img src="images/Pomodoro.webp" alt="Pomodoro Hourglass"/>
+                    </a>
+                </div>
+            </div>
+            <div id="item10">
+                <div class="left">
+                    <a href="#"><div class="button"><p>CLOSE &gt;&gt;</p></div></a>
+                    <h2>Tic Tac Toe</h2>
+                    <p>
+                        A Tic Tac Toe project as part of the projects for freeCodeCamp. The algorithm used to check for a win is based on a simple array structure.
+                        Each row and column has three positions which win the game if any position reaches a total of three. Add a diagonal and reverse diagonal, and
+                        the rest is easy. Be sure to play with the music on.
+                    </p>
+                </div>
+                <div class="right">
+                    <a href="TicTacToe/index.html" target="_blank">
+                        <img src="images/TicTacToe.webp" alt="Tic Tac Toe"/>
+                    </a>
+                </div>
+            </div>
+            <div id="item11">
+                <div class="left">
+                    <a href="#"><div class="button"><p>CLOSE &gt;&gt;</p></div></a>
+                    <h2>Simon Game</h2>
+                    <p>
+                        A Simon Game project as part of the projects for freeCodeCamp. The play sequence is for twenty turns. If strict mode is on, the game resets
+                        once a mistaken button is pushed. The error face and happy face will likely appear out of place on various browser settings. The error handling
+                        code mostly works, but if you get click-happy, the timing will break.
+                    </p>
+                </div>
+                <div class="right">
+                    <a href="SimonGame/index.html" target="_blank">
+                        <img src="images/Simon.webp" alt="Simon Game"/>
+                    </a>
+                </div>
+            </div>
+            <div id="item12">
+                <div class="left">
+                    <a href="#"><div class="button"><p>CLOSE &gt;&gt;</p></div></a>
+                    <h2>RGB Color Game</h2>
+                    <p>
+                        An RGB Color Picker game to test the user's knowledge of RGB values.
+                    </p>
+                </div>
+                <div class="right">
+                    <a href="RGB_Game/index.html" target="_blank">
+                        <img src="images/RGB.webp" alt="RGB Game"/>
+                    </a>
+                </div>
+            </div>
         </div>
-        </a>
-    </li>
-    <li>
-        <a href="#item2">
-            <div class="hexagon">
-                <img src="images/ShortestPathColorized.webp" alt="Shortest Path Algorithm"/>
-                <div class="overlay">Shortest Path Algorithm</div>
-            </div>
-        </a>
-    </li>
-    <li>
-        <a href="#item3">
-            <div class="hexagon">
-                <img class="hexVert" src="images/MobileSiteColorized.webp" alt="Mobile Web Site"/>
-                <div class="overlay">ESL Mobile Movie Site</div>
-            </div>
-        </a>
-    </li>
-    <li>
-        <a href="#item4">
-            <div class="hexagon">
-                <img src="images/RandomQuotesColorized.webp" alt="Random Quote Generator"/>
-                <div class="overlay">Random Quote Generator</div>
-            </div>
-        </a>
-    </li>
-    <li>
-        <a href="#item5">
-            <div class="hexagon">
-                <img src="images/WeatherColorized.webp" alt="Weather Report"/>
-                <div class="overlay">Weather Report</div>
-            </div>
-        </a>
-    </li>
-    <li>
-        <a href="#item6">
-            <div class="hexagon">
-                <img src="images/WikipediaColorized.webp" alt="Wikipedia Page Viewer"/>
-                <div class="overlay">Wikipedia Page Viewer</div>
-            </div>
-        </a>
-    </li>
-    <li>
-        <a href="#item7">
-            <div class="hexagon">
-                <img src="images/JSCalcColorized.webp" alt="Javascript Calculator"/>
-                <div class="overlay">Javascript Calculator</div>
-            </div>
-        </a>
-    </li>
-    <li>
-        <a href="#item8">
-            <div class="hexagon">
-                <img src="images/TwitchTVColorized.webp" alt="Twitch TV Viewer"/>
-                <div class="overlay">Twitch TV Viewer</div>
-            </div>
-        </a>
-    </li>
-    <li>
-        <a href="#item9">
-            <div class="hexagon">
-                <img src="images/PomodoroColorized.webp" alt="Pomodoro Hourglass" />
-                <div class="overlay">Pomodoro Clock</div>
-            </div>
-        </a>
-    </li>
-    <li>
-        <a href="#item10">
-            <div class="hexagon">
-                <img src="images/TicTacToeColorized.webp" alt="Tic Tac Toe" />
-                <div class="overlay">Tic Tac Toe</div>
-            </div>
-        </a>
-    </li>
-    <li>
-        <a href="#item11">
-            <div class="hexagon">
-                <img src="images/SimonColorized.webp" alt="Simon Game" />
-                <div class="overlay">Simon Game</div>
-            </div>
-        </a>
-    </li>
-    <li>
-        <a href="#item12">
-            <div class="hexagon">
-                <img src="images/RGBColorized.webp" alt="RGB Game" />
-                <div class="overlay">RGB Picker Game</div>
-            </div>
-        </a>
-    </li>
-</ul>
-
-<div id="item1">
-    <div class="left">
-        <a href="#"><div class="button"><p>CLOSE &gt;&gt;</p></div></a>
-        <h2>Earthquake Map</h2>
-        <p>
-            This map is a simple data visualization project that displays real-time earthquake data from
-            an Atom feed at the <a href="https://earthquake.usgs.gov/" target="_blank">U.S. Geological Society</a>. The map(s) come
-            from <a href="http://unfoldingmaps.org/" target="_blank">Unfolding Maps</a>, and the legend and graphics are made with
-            <a href="https://processing.org/" target="_blank">Processing 2.0</a>. This project was part of the coursework of a Coursera
-            Java class called <a href="https://www.coursera.org/learn/data-structures-optimizing-performance" target="_blank">Data Structures and Performance</a>
-            offered by UCSD.
-        </p>
-    </div>
-
-    <div class="right">
-        <img id="myImgQuake" src="images/EarthquakeMap_half.webp" alt="Earthquake Map"/>
-    </div>
-</div>
-
-<div id="item2">
-    <div class="left">
-        <a href="#"><div class="button"><p>CLOSE &gt;&gt;</p></div></a>
-        <h2>Shortest Path Algorithm</h2>
-        <p>
-            This was another project for a Coursera class from UCSD called <a href="https://www.coursera.org/learn/advanced-data-structures" target="_blank">
-            Advanced Data Structures in Java</a>. Google Maps were used to extract data points that were parsed into intersection points, and shortest
-            path algorithms were used to find the shortest route between two points. Algorithms for this project included BFS, Dijkstra, and A*.
-        </p>
-        <p>I also created a modified version that took speed limits into account and generated the fastest route between two points. Since speed
-        limit data is unavailable for free, I identified road segments as per
-        <a href="http://wiki.openstreetmap.org/wiki/Main_Page" target="_blank">Open Street Map</a> and assigned approximate speeds per segment.
-        </p>
-    </div>
-    <div class="right">
-        <img id="myImgAlg" src="images/ShortestPath_half.webp" alt="Shortest Path Algorithm"/>
-    </div>
-</div>
-<div id="item3">
-    <div class="left">
-        <a href="#"><div class="button"><p>CLOSE &gt;&gt;</p></div></a>
-        <h2>ESL Mobile Movie Site</h2>
-        <p>
-            One of my careers is ESL, and I currently teach at Santa Monica College. I started a movie club for the ESL students, and after I realized my
-            study guides reached upwards of 30 printed pages per movie per person, I decided to save a forest and put the guides in a mobile web site.</p>
-        <p>Since all of my students are surgically attached to their cellphones anyway, and since this was a great way to practice my skills, the web site
-            seemed like a great practical solution. My students and my colleagues both gave it positive reviews. Clicking on the image will redirect you
-            to <a href="http://rebrand.ly/ESLMovies" target="_blank">the actual site</a>, which is best viewed on a mobile device. Each movie image links to that movie's study guide.</p>
-        <p>The site is mostly static HTML with some minor CSS and Bootstrap navigation. It is clean, user-friendly, and easy to read.</p>
-    </div>
-    <div class="right">
-        <a href="http://rebrand.ly/ESLMovies"  target="_blank">
-            <img class="rightVert" src="images/MobileSite.webp" alt="Mobile Site"/>
-        </a>
-    </div>
-</div>
-<div id="item4">
-    <div class="left">
-        <a href="#"><div class="button"><p>CLOSE &gt;&gt;</p></div></a>
-        <h2>Random Quote Generator</h2>
-        <p>
-            A Random Quote Generator project as part of the projects for freeCodeCamp. The logic is a combination of AJAX and jQuery. The quote content
-            comes from an API from <a href="https://quotesondesign.com" target="_blank">https://quotesondesign.com</a>.
-        </p>
-    </div>
-    <div class="right">
-        <a href="RandomQuoteGenerator/index.html" target="_blank">
-        <img src="images/RandomQuotes.webp" alt="Random Quote Generator"/>
-        </a>
-    </div>
-</div>
-<div id="item5">
-    <div class="left">
-        <a href="#"><div class="button"><p>CLOSE &gt;&gt;</p></div></a>
-        <h2>Weather Report</h2>
-        <p>
-            A Weather Report project as part of the projects for freeCodeCamp. The app makes calls to the Google geocode and staticmap API's. The
-            location's longitude and latitude are then passed to the API at <a href="https://darksky.net/" target="_blank">https://darksky.net/</a>
-            to get the weather report for that location.
-        </p>
-    </div>
-    <div class="right">
-        <a href="WeatherApp/index.html" target="_blank">
-        <img src="images/Weather.webp" alt="Weather Report"/>
-        </a>
-    </div>
-</div>
-<div id="item6">
-    <div class="left">
-        <a href="#"><div class="button"><p>CLOSE &gt;&gt;</p></div></a>
-        <h2>Wikipedia Page Viewer</h2>
-        <p>
-            A Wikipedia Page Viewing project as part of the projects for freeCodeCamp. I used AngularJS for the calls to the Wikipedia API. The user can
-            either click the link to get a random page or use the search engine to get the top ten results of a custom search.
-            Results are displayed with thumbnail images (if they exist on the Wikipedia page) in a sequence of custom outputData objects.
-        </p>
-    </div>
-    <div class="right">
-        <a href="WikipediaViewer/index.html" target="_blank">
-        <img src="images/Wikipedia.webp" alt="Wikipedia Page Viewer"/>
-        </a>
-    </div>
-</div>
-<div id="item7">
-    <div class="left">
-        <a href="#"><div class="button"><p>CLOSE &gt;&gt;</p></div></a>
-        <h2>Javascript Calculator</h2>
-        <p>
-            A Javascript Calculator project as part of the projects for freeCodeCamp. The code is simple jQuery. Very few bells and whistles. If I wanted
-            to make a more robust scientific calculator, I wouldn't use floating-point-unfriendly JavaScript.
-        </p>
-    </div>
-    <div class="right">
-        <a href="JavaScriptCalculator/index.html" target="_blank">
-        <img src="images/JSCalc.webp" alt="Javascript Calculator"/>
-        </a>
-    </div>
-</div>
-<div id="item8">
-    <div class="left">
-        <a href="#"><div class="button"><p>CLOSE &gt;&gt;</p></div></a>
-        <h2>Twitch TV Viewer</h2>
-        <p>
-            A Twitch TV API project as part of the projects for freeCodeCamp, and I only completed the minimum number of user stories since
-            the API is so limited in scope.
-        </p>
-    </div>
-    <div class="right">
-        <a href="TwitchViewer/index.html" target="_blank">
-        <img src="images/TwitchTV.webp" alt="Twitch TV Viewer"/>
-        </a>
-    </div>
-</div>
-<div id="item9">
-    <div class="left">
-        <a href="#"><div class="button"><p>CLOSE &gt;&gt;</p></div></a>
-        <h2>Pomodoro Clock</h2>
-        <p>
-            A Pomodoro Clock project as part of the projects for freeCodeCamp. I wanted to make it more visually appealing than a straightforward
-            clock, so I added CSS animations to create an hourglass effect. It was harder than I expected!
-        </p>
-    </div>
-    <div class="right">
-        <a href="PomodoroClock/index.html" target="_blank">
-        <img src="images/Pomodoro.webp" alt="Pomodoro Hourglass"/>
-        </a>
-    </div>
-</div>
-<div id="item10">
-    <div class="left">
-        <a href="#"><div class="button"><p>CLOSE &gt;&gt;</p></div></a>
-        <h2>Tic Tac Toe</h2>
-        <p>
-            A Tic Tac Toe project as part of the projects for freeCodeCamp. The algorithm used to check for a win is based on a simple array structure.
-            Each row and column has three positions which win the game if any position reaches a total of three. Add a diagonal and reverse diagonal, and
-            the rest is easy. Be sure to play with the music on.
-        </p>
-    </div>
-    <div class="right">
-        <a href="TicTacToe/index.html" target="_blank">
-        <img src="images/TicTacToe.webp" alt="Tic Tac Toe"/>
-        </a>
-    </div>
-</div>
-<div id="item11">
-    <div class="left">
-        <a href="#"><div class="button"><p>CLOSE &gt;&gt;</p></div></a>
-        <h2>Simon Game</h2>
-        <p>
-            A Simon Game project as part of the projects for freeCodeCamp. The play sequence is for twenty turns. If strict mode is on, the game resets
-            once a mistaken button is pushed. The error face and happy face will likely appear out of place on various browser settings. The error handling
-            code mostly works, but if you get click-happy, the timing will break.
-        </p>
-    </div>
-    <div class="right">
-        <a href="SimonGame/index.html" target="_blank">
-        <img src="images/Simon.webp" alt="Simon Game"/>
-        </a>
-    </div>
-</div>
-<div id="item12">
-    <div class="left">
-        <a href="#"><div class="button"><p>CLOSE &gt;&gt;</p></div></a>
-        <h2>RGB Color Game</h2>
-        <p>
-            An RGB Color Picker game to test the user's knowledge of RGB values.
-        </p>
-    </div>
-    <div class="right">
-        <a href="RGB_Game/index.html" target="_blank">
-            <img src="images/RGB.webp" alt="RGB Game"/>
-        </a>
     </div>
 </div>
 <div id="contact">
@@ -376,6 +438,9 @@
         <input type="submit" class="button" name="submit" value="submit"/>
     </form>
 </div>
+<!--The "log" below is output for the "breakpoints.js" code and the script embedded above in the <head> section. Delete when finished playing around. -->
+<div id="log">
 
+</div>
 </body>
 </html>

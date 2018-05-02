@@ -29,21 +29,20 @@ function confirmMsg() {
     location.href = location.pathname;
     location.href = "#";
 }
-
+/**
+ * Added by Admin on 4/07/2018.
+ */
 //target all the "CLOSE >>" buttons on the transition panels
 const CLOSE_PANEL_BUTTON_LIST = document.querySelectorAll(".button");
-
 //target all the project hexes on the main page
 const SET_WINDOW_COORDS_HEXES = document.querySelectorAll(".overlay");
 var x = 0;
 var y = 0;
-
 //assign the "scrollToWindowPosition" function after the sliding transition has completed
 //this way, the hexes don't jump back to the top of the page after viewing the sliding detail panel
 CLOSE_PANEL_BUTTON_LIST.forEach(function(closebutton){
     closebutton.addEventListener("transitionend", function(e) {scrollToWindowPosition(e);}, false);
 });
-
 //assign the current window coordinates to local variables every time the user clicks on one of the hexes
 SET_WINDOW_COORDS_HEXES.forEach(function(hex){
     hex.addEventListener("click", function (e) {setWindowPosition(window.scrollX, window.scrollY);}, false);

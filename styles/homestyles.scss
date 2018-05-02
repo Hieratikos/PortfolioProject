@@ -1,33 +1,239 @@
 @import "templateProjectPageHeader";
 html, body {
-    background: linear-gradient(to right, rgba(53,28,77,1), rgba(118,82,133,1));
+    //background: linear-gradient(to right, rgba(53,28,77,1), rgba(118,82,133,1));
+    background: linear-gradient(to left, rgba(118,82,133,1), rgba(53,28,77,1));
     font-family: $fontBody;
 }
-/* special-elite-regular - latin */
-//@font-face {
-//    font-family: 'Special Elite';
-//    font-style: normal;
-//    font-weight: 400;
-//    src: local('Special Elite'), local('SpecialElite-Regular'),
-//    url('../fonts/special-elite-v6-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-//    url('../fonts/special-elite-v6-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-//}
-///* denk-one-regular - latin */
-//@font-face {
-//    font-family: 'Denk One';
-//    font-style: normal;
-//    font-weight: 400;
-//    src: local('Denk One'), local('DenkOne-Regular'),
-//    url('../fonts/denk-one-v4-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-//    url('../fonts/denk-one-v4-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-//}
+h1, h2, h3, h4, h5, h6 {
+    font-family: $fontHeadings;
+}
+#title{
+    font-family: $fontHeadings;
+    color: $HEATWAVE;
+    text-align: center;
+}
+/* ------------------------*/ /* ---------->>> Left Sidebar -- Begin <<<-----------*/ /* ------------------------*/
+#sidebar {
+    padding: 40px 1%;
+    //background: linear-gradient(to right, rgba(53,28,77,1), rgba(73,44,94,1));
+    text-align: center;
+    color: $HEATWAVE;
+    font-family: $fontHeadings;
+}
+#sidebar__portrait {
+    width: 80%;
+    overflow: hidden;
+    margin: 0 auto 2em;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: $HEATWAVE;
+    border-width: 2px;
+}
+#sidebar__portrait img {
+    height: auto;
+    width: 100%;
+}
+.sidebar_social-icons > a {
+    color: $HEATWAVE;
+}
+.sidebar_social-icons > a:hover {
+    color: $SUNSET;
+}
+p.name, p.jobrole {
+    line-height: 1.5rem;
+}
+p.jobrole{
+    font-size: 1.5rem;
+}
+p.name {
+    font-size: 3rem;
+}
+p.creds{
+    font-size: .6rem;
+    font-family: $fontBody;
+    font-weight: bold;
+    margin-bottom: .5rem;
+}
+.lineImgTitle{
+    padding: 5px 5px;
+    display: inline-block;
+}
+.lineLeft, .lineRight{
+    border-bottom: 1px solid $HEATWAVE;
+    width: 50%;
+    height: 50%;
+}
+.lineLeft{
+    float: left;
+    margin-left: 0;
+}
+.lineRight{
+    float: right;
+    margin-right: 0;
+}
+.rowLogo{
+    flex-wrap: nowrap;
+    margin-bottom: 1rem;
+}
+/* ------------------------*/ /* ---------->>> Left Sidebar -- End <<<-----------*/ /* ------------------------*/
 
-/* ------------------------*/ /* ---------->>> GRID <<<-----------*/ /* ------------------------*/
+/* ------------------------*/ /* ---------->>> Radar Animation -- Begin <<<-----------*/ /* ------------------------*/
+.radar {
+    width: auto;
+    height: auto;
+    position: relative;
+    margin-left: auto;
+    margin-top: auto;
+    will-change: transform;
+}
+.radar .pointer {
+    position: absolute;
+    left: -1.5820106%;
+    right: -1.5820106%;
+    top: -1.5820106%;
+    bottom: 50%;
+    transform-origin: 50% 100%;
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    background-image: linear-gradient(135deg,
+            rgba(254, 180, 123, .8) 0%,
+            rgba(254, 180, 123, .02) 70%,
+            rgba(254, 180, 123, 0) 100%
+    );
+    clip-path: polygon(100% 0%, 100% 10%, 50% 100%, 0 100%, 0 0);
+    animation: rotate360 3s infinite linear;
+}
+@keyframes rotate360 {
+    to {
+        transform: rotate(-360deg);
+    }
+}
+//.target is the filled dot on the camel's eye
+.target {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 126, 95,1);
+    border-radius: 50%;
+}
+//.target-1 is the location for the dot on the eye
+.target-1 {
+    top: 24%;
+    left: 20%;
+    animation: blink 3s infinite 2.65s;
+}
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+/* ------------------------*/ /* ---------->>> Radar Animation -- End <<<-----------*/ /* ------------------------*/
+
+/* ------------------------*/ /* ---------->>> Contact Form -- Begin <<<-----------*/ /* ------------------------*/
+//TODO: make this a floating modal box & refactor the repeated properties
+#contact {
+    //z-index: 1;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    display: block;
+    height: 0;
+    width: 100%;
+    box-sizing: border-box;
+    //padding: 0 0 0 30%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: linear-gradient(to right, rgba(255, 126, 95,1), rgba(254, 180, 123,1));
+    transition: transform 0.6s linear 0s, height 0s linear 0.6s;
+}
+#contact:target {
+    height: 100%;
+    overflow: auto;
+    transition: transform 0.6s linear 0s, height 0s linear 0s;
+    transform: translateZ(0) translateX(100%);
+}
+#contact form {
+    position: relative;
+    height: auto;
+    width: 80%;
+    margin: 0 auto;
+    background: none;
+    text-align: center;
+}
+#contact label {
+    display: inline-block;
+    width: 20%;
+    padding: 0 10px 0 0;
+    box-sizing: border-box;
+    vertical-align: middle;
+    text-align: right;
+}
+#contact input[type="text"] {
+    height: 30px;
+    width: 50%;
+    border: 0;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+#contact input[type="submit"] {
+    border: 0;
+    margin: 15px 0 15px 20%;
+}
+#contact label[for="message"] {
+    height: 300px;
+    padding: 120px 10px 0 10px;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+#contact textarea {
+    height: 300px;
+    width: 50%;
+    padding: 5px 10px;
+    border: 0;
+    resize: none;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+/* ------------------------*/ /* ---------->>> Contact Form -- End <<<-----------*/ /* ------------------------*/
+
+/* ------------------------*/ /* ---------->>> GRID -- Begin <<<-----------*/ /* ------------------------*/
+#item1, #item2, #item3, #item4, #item5, #item6, #item7, #item8, #item9, #item10, #item11, #item12, #item13, #item14, #item15 {
+    overflow: hidden;
+    z-index: 3;
+    display: block;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 0;
+    width: 100%;
+    background: #FFFFFF;
+    transition: transform 0.6s linear 0s, height 0s linear 0.6s;
+}
+#item1:target, #item2:target, #item3:target, #item4:target, #item5:target, #item6:target, #item7:target, #item8:target,
+#item9:target, #item10:target, #item11:target, #item12:target, #item13:target, #item14:target, #item15:target {
+    height: 100%;
+    overflow: auto;
+    transition: transform 0.6s linear 0s, height 0s linear 0s;
+    transform: translateZ(0) translateX(-100%);
+}
+.overlay{
+    background: linear-gradient(to right, rgba(255, 126, 95,1), rgba(254, 180, 123,1));
+    padding: 50% 2% 2% 2%;
+    color: #351C4D;
+    font-family: $fontBody;
+    text-align: center;
+    /*font-size: x-large;*/
+    font-size: 1.5vmax;
+    font-weight: 100;
+    text-shadow: -2px 2px 4px #765285;
+}
 #grid{
-    margin: 0 0 0 30%;
+    //margin: 0 0 0 30%;
     /*padding: 11em 5em 10em 0; !*clears the ul of the default value of 40px *!*/
-    padding: 14% 5em 10em 0;
-     background: linear-gradient(to right, rgba(73,44,94,1), rgba(118,82,133,1));
+    //padding: 14% 5em 10em 0;
+    //background: linear-gradient(to right, rgba(73,44,94,1), rgba(118,82,133,1));
 }
 /* the parallelogram */
 #grid li{
@@ -125,153 +331,9 @@ also, add 2 to margin-top and margin-bottom for every additional hex added to a 
     display: block;
     clear: both;
 }
-/* ------------------------*/ /* ---------->>> LAYOUT <<<-----------*/ /* ------------------------*/
-body{
-    position: relative;
-    height: 100%;
-    width: 100%;
-    /*z-index: 1;*/
-    top:0;
-    overflow-x: hidden;
-    font-size: 2em !important;
-    margin-bottom: -50px;
-}
-a {
-    text-decoration: none;
-}
-a:hover{
-    text-decoration: none;
-}
-#sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 30%;
-    z-index: 2;
-    box-sizing: border-box;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    padding: 40px 1%;
-    background: linear-gradient(to right, rgba(53,28,77,1), rgba(73,44,94,1));
-    text-align: center;
-}
-#sidebar__portrait {
-    height: auto;
-    width: 70%;
-    overflow: hidden;
-    margin: 0 auto;
-    border-radius: 50%;
-    border-style: solid;
-    border-color: rgb(255, 126, 95);
-    border-width: 2px;
-}
-#sidebar__portrait img {
-    height: auto;
-    width: 100%;
-}
-#sidebar__social-icons {
-    display: block;
-}
-.sidebar__social-icon:hover {
-    background: #5f5f5f;
-}
-#title {
-    position: fixed;
-    top: 0;
-    right: 0;
-    /*height: 100px;*/
-    height: 30%;
-    width: 70%;
-    z-index: 1;
-    box-sizing: border-box;
-    padding: 1% 0 0 0;
-    background: linear-gradient(to right, rgba(73,44,94,1), rgba(118,82,133,1));
-    text-align: center;
-    padding-bottom: 12%;
-}
-#item1, #item2, #item3, #item4, #item5, #item6, #item7, #item8, #item9, #item10, #item11, #item12, #item13, #item14, #item15 {
-    overflow: hidden;
-    z-index: 3;
-    display: block;
-    position: fixed;
-    top: 0;
-    right: -100%;
-    height: 0;
-    width: 100%;
-    background: #FFFFFF;
-    transition: transform 0.6s linear 0s, height 0s linear 0.6s;
-}
-#item1:target, #item2:target, #item3:target, #item4:target, #item5:target, #item6:target, #item7:target, #item8:target,
-#item9:target, #item10:target, #item11:target, #item12:target, #item13:target, #item14:target, #item15:target {
-    height: 100%;
-    overflow: auto;
-    transition: transform 0.6s linear 0s, height 0s linear 0s;
-    transform: translateZ(0) translateX(-100%);
-}
-#contact {
-    z-index: 1;
-    position: fixed;
-    top: 0;
-    left: -100%;
-    display: block;
-    height: 0;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 0 0 0 30%;
-    overflow-x: hidden;
-    overflow-y: auto;
-    background: linear-gradient(to right, rgba(255, 126, 95,1), rgba(254, 180, 123,1));
-    transition: transform 0.6s linear 0s, height 0s linear 0.6s;
-}
-#contact:target {
-    height: 100%;
-    overflow: auto;
-    transition: transform 0.6s linear 0s, height 0s linear 0s;
-    transform: translateZ(0) translateX(100%);
-}
-#contact form {
-    position: relative;
-    height: auto;
-    width: 80%;
-    margin: 0 auto;
-    background: none;
-    text-align: center;
-}
-#contact label {
-    display: inline-block;
-    width: 20%;
-    padding: 0 10px 0 0;
-    box-sizing: border-box;
-    vertical-align: middle;
-    text-align: right;
-}
-#contact input[type="text"] {
-    height: 30px;
-    width: 50%;
-    border: 0;
-    padding: 0 10px;
-    box-sizing: border-box;
-}
-#contact input[type="submit"] {
-    border: 0;
-    margin: 15px 0 15px 20%;
-}
-#contact label[for="message"] {
-    height: 300px;
-    padding: 120px 10px 0 10px;
-    box-sizing: border-box;
-    vertical-align: top;
-}
-#contact textarea {
-    height: 300px;
-    width: 50%;
-    padding: 5px 10px;
-    border: 0;
-    resize: none;
-    overflow-y: auto;
-    box-sizing: border-box;
-}
+/* ------------------------*/ /* ---------->>> GRID -- End <<<-----------*/ /* ------------------------*/
+
+/* ------------------------*/ /* ---------->>> Modal Detail Display -- Begin <<<-----------*/ /* ------------------------*/
 .left, .right {
     position: absolute;
     height: 100%;
@@ -299,9 +361,9 @@ a:hover{
 }
 .button {
     display: inline-block;
-    height: auto;
-    width: auto;
-    padding: 5px 10px;
+    //height: auto;
+    //width: auto;
+    padding: 15px 15px 0 15px;
     border-radius: 10px;
     margin: 1em;
     transition: all 0.3s linear 0s;
@@ -310,244 +372,56 @@ a:hover{
 .button:hover {
     background: #FF7E5F;
 }
-/* ------------------------*/ /* ---------->>> TEXT <<<-----------*/ /* ------------------------*/
-#sidebar p.name, #sidebar p.jobrole {
-    height: auto;
-    width: auto;
-    margin: 0;
-    font-family: $fontHeadings;
-    font-size: 2.2vmin;
-    line-height: 1.2em;
-    color: #FEB47B;
-}
+/* ------------------------*/ /* ---------->>> Modal Detail Display -- End <<<-----------*/ /* ------------------------*/
 
-label {
-    font-family: 'Special Elite';
-    font-size: 1.5em;
-    line-height: 1.5em;
-    color: #351C4D;
-}
-
-#sidebar p.name {
-    margin: 10% 0 0 0;
-    font-family: $fontHeadings;
-    color: #FF7E5F;
-    font-size: 4.5vmin;
-    /*line-height: 1.8em;*/
-}
-p.creds{
-    color: #FF7E5F;
-    font-size: 1.0vmin;
-}
-
-.left h2 {
-    font-family: 'Special Elite';
-    text-align: center;
-    font-size: 1.6em;
-    color: #351C4D;
-}
-
-.left p {
-    font-family: 'Special Elite';
-    padding: 0 10px;
-    font-size: 1.4em;
-    margin-left: 15%;
-    margin-right: 15%;
-    color: #351C4D;
-}
-.left p a:hover{
-    background: rgba(254,180,123,0.6);
-}
-
-#title h1 {
-    font-family: $fontHeadings;
-    font-size: 5vmax;
-    font-weight: normal;
-    color: #FF7E5F;
-    text-shadow: -3px 3px 3px #351C4D
-}
-
-.button p, input[type="submit"].button {
-    margin: 0;
-    font-family: $fontBody;
-    color: #351C4D;
-    font-size: 1em;
-}
-/* Icon Bounce */
-.hvr-icon-bounce {
-    display: inline-block;
-    vertical-align: middle;
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px transparent;
-    position: relative;
-    padding-right: 1.5em;
-    transition-duration: 0.3s;
-}
-.hvr-icon-bounce:before {
-    position: absolute;
-    /*right: 1em;*/
-    padding: 0 1px;
-    transform: translateZ(0);
-    transition-duration: 0.3s;
-    transition-property: transform;
-    transition-timing-function: ease-out;
-}
-.hvr-icon-bounce:hover:before, .hvr-icon-bounce:focus:before, .hvr-icon-bounce:active:before {
-    transform: scale(1.5);
-    transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
-}
-.footImgAwesome{
-    margin-left:0;
-    margin-right:0;
-    height: 1em;
-    width: 1em;
-    font-size: 2.5em !important;
-    padding-right: 1em;
-    padding-left: .5em;
-    color: #FEB47B;
-}
-.footImgAwesome:hover{
-    color: #ff7e61;
-}
-.lineFull {
-    border-bottom: 1px solid #ff7e61;
-    text-align:center;
-    height:1.3em;
-    margin:2em auto;
-    width: 100%;
-    display: block;
-}
-.lineImgPort {
-    padding: 5px 5px;
-    width:50px;
-    height:auto;
-    /*background: #351C4D;*/
-    background: #603f72;
-}
-.lineImgTitle{
-    padding: 5px 5px;
-    width:50px;
-    height:auto;
-    background: #3f2456;
-}
-.modal {
-    display: none; /* Hidden by default */
-    /*position: fixed; !* Stay in place *!*/
-    z-index: 4; /* Sit on top */
-    padding-top: 1%; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background: linear-gradient(to right, rgba(255, 126, 95,1), rgba(254, 180, 123,1));
-}
-/* Modal Content (Image) */
-.modal-content {
-    margin: auto;
-    display: block;
-    width: 85%;
-    animation-name: zoom;
-    animation-duration: 0.6s;
-}
-#myImg {
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-#myImg:hover {
-    opacity: 0.7;
-}
-#myImgQuake:hover{
-    cursor: pointer;
-}
-#myImgAlg:hover{
-    cursor: pointer;
-}
-/* Caption of Modal Image (Image Text) - Same Width as the Image */
-#imgCaption {
-    margin: auto;
-    text-align: center;
-    color: #351C4D;
-    padding: 10px;
-    font-family: 'Special Elite';
-    font-size: 2em;
-}
-/* The Close Button */
-.fa-close {
-    position: absolute;
-    top: .5em;
-    right: 1em;
-    color: #351C4D;
-    font-size: 2em !important;
-    font-weight: bold !important;
-    transition: 0.3s;
-}
-.fa-close:hover,
-.fa-close:focus {
-    color: #351C4D;
-    text-decoration: none;
-    cursor: pointer;
-}
-.overlay{
-    background: linear-gradient(to right, rgba(255, 126, 95,1), rgba(254, 180, 123,1));
-    padding: 50% 2% 2% 2%;
-    color: #351C4D;
-    font-family: $fontBody;
-    text-align: center;
-    /*font-size: x-large;*/
-    font-size: 1.5vmax;
-    font-weight: 100;
-    text-shadow: -2px 2px 4px #765285;
-}
-.radar {
-    width: auto;
-    height: auto;
-    position: relative;
-    margin-left: auto;
-    margin-top: auto;
-    will-change: transform;
-}
-.radar .pointer {
-    position: absolute;
-    left: -1.5820106%;
-    right: -1.5820106%;
-    top: -1.5820106%;
-    bottom: 50%;
-    transform-origin: 50% 100%;
-    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
-    background-image: linear-gradient(135deg,
-    rgba(254, 180, 123, .8) 0%,
-    rgba(254, 180, 123, .02) 70%,
-    rgba(254, 180, 123, 0) 100%
-    );
-    clip-path: polygon(100% 0%, 100% 10%, 50% 100%, 0 100%, 0 0);
-    animation: rotate360 3s infinite linear;
-}
-@keyframes rotate360 {
-    to {
-        transform: rotate(-360deg);
+/* ------------------------*/ /* ---------->>> Media Queries -- Begin <<<-----------*/ /* ------------------------*/
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    //body {background: red;}
+    .display-1{
+        font-size: 2rem;
+    }
+    .faSize{
+        font-size: 2em;
     }
 }
-.target {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background-color: rgba(255, 126, 95,1);
-    border-radius: 5px;
-    opacity: 0;
-    box-shadow: 0 0 20px 2px #fff;
-}
-.target-1 {
-    top: 24%;
-    left: 20%;
-    -webkit-animation: 3s blink infinite 2.65s;
-}
-@-webkit-keyframes blink {
-    0% {
-        opacity: 1;
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    //body {background: green;}
+    .display-1{
+        font-size: 3rem;
     }
-    100% {
-        opacity: 0;
+    .faSize{
+        font-size: 3em;
+    }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    //body {background: blue;}
+    .display-1{
+        font-size: 6rem;
+    }
+    .faSize{
+        font-size: 2.7em;
+    }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    //body {background: orange;}
+    .display-1{
+        font-size: 6rem;
+    }
+    .faSize{
+        font-size: 3.5em;
+    }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    //body {background: pink;}
+    .display-1{
+        font-size: 6rem;
+    }
+    .faSize{
+        font-size: 4em;
     }
 }
