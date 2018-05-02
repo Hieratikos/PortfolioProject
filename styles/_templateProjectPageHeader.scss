@@ -1,0 +1,58 @@
+@import "globalVariables";
+//The entire template for the page header as nested id's.
+#tempHeader{
+  color: $NIGHTFALL;
+  text-align: center;
+  font-family: $fontHeadings;
+  letter-spacing: $LSpace;
+  font-size: 1.3em;
+  margin-top: .5em;
+
+  #tempPageTitle{
+    font-size: 3.0em;
+  }
+  #tempAuthor{
+    font-size: 2.0em;
+    margin-top: .5em;
+  }
+  #tempLogoTable{
+    width: 100%;
+    border: none;
+
+    #tempLogoTableLeft {
+      width: 45%;
+      padding-left: 5%;
+      padding-top: 30px;
+    }
+    #tempLogoTableCenter{
+      width: 10%;
+      #logoImg{
+        width: 3.5vmax;
+        height: auto;
+      }
+    }
+    #tempLogoTableRight {
+      width: 45%;
+      padding-right: 5%;
+      padding-top: 30px;
+    }
+    hr.flared {
+      height: 30px;
+      border-style: solid;
+      border-color: $NIGHTFALL;
+      border-width: 3px 0 0 0;
+      border-radius: 20px;
+      overflow: visible;
+    }
+    hr.flared:before {
+      display: block;
+      content: "";
+      height: 30px;
+      margin-top: -33px;
+      border-style: solid;
+      border-color: $NIGHTFALL;
+      border-width: 0 0 3px 0;
+      border-radius: 20px;
+    }
+  }
+}
