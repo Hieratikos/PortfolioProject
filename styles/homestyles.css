@@ -712,6 +712,71 @@ also, add 2 to margin-top and margin-bottom for every additional hex added to a 
 .button:hover {
   background: #FF7E5F; }
 
+.modal {
+  display: none;
+  /* Hidden by default */
+  /*position: fixed; !* Stay in place *!*/
+  z-index: 4;
+  /* Sit on top */
+  padding-top: 1%;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background: linear-gradient(to right, #ff7e5f, #feb47b); }
+
+/* Modal Content (Image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 85%;
+  animation-name: zoom;
+  animation-duration: 0.6s; }
+
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s; }
+
+#myImg:hover {
+  opacity: 0.7; }
+
+#myImgQuake:hover {
+  cursor: pointer; }
+
+#myImgAlg:hover {
+  cursor: pointer; }
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#imgCaption {
+  margin: auto;
+  text-align: center;
+  color: #351C4D;
+  padding: 10px;
+  font-family: "Cuadradex", sans-serif;
+  font-size: 2em; }
+
+/* The Close Button */
+.fa-close {
+  position: absolute;
+  top: .5em;
+  right: 1em;
+  color: #351C4D;
+  font-size: 2em !important;
+  font-weight: bold !important;
+  transition: 0.3s; }
+
+.fa-close:hover,
+.fa-close:focus {
+  color: #351C4D;
+  text-decoration: none;
+  cursor: pointer; }
+
 /* ------------------------*/
 /* ---------->>> Modal Detail Display -- End <<<-----------*/
 /* ------------------------*/
@@ -754,4 +819,4 @@ also, add 2 to margin-top and margin-bottom for every additional hex added to a 
   .faSize {
     font-size: 4em; } }
 
-/*# sourceMappingURL=homestyles.css.map
+/*# sourceMappingURL=homestyles.css.map */
