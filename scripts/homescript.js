@@ -23,6 +23,7 @@ $(document).ready(function () {
                 $("#myModal")[0].style.display = "none";
             }else{
                 location.href = "#";
+                scrollToWindowPosition(e);
             }
         }
     });
@@ -45,14 +46,19 @@ var y = 0;
 //assign the "scrollToWindowPosition" function after the sliding transition has completed
 //this way, the hexes don't jump back to the top of the page after viewing the sliding detail panel
 CLOSE_PANEL_BUTTON_LIST.forEach(function(closebutton){
-    closebutton.addEventListener("transitionend", function(e) {scrollToWindowPosition(e);}, false);
+    closebutton.addEventListener("click", function(e) {
+        location.href = "#";
+        scrollToWindowPosition();
+    });
 });
 
 //assign the current window coordinates to local variables every time the user clicks on one of the hexes
 SET_WINDOW_COORDS_HEXES.forEach(function(hex){
-    hex.addEventListener("click", function (e) {setWindowPosition(window.scrollX, window.scrollY);}, false);
+    hex.addEventListener("click", function (e) {
+        setWindowPosition(window.scrollX, window.scrollY);
+        });
 });
-function scrollToWindowPosition(e){
+function scrollToWindowPosition(){
     window.scrollTo(x, y);
 }
 function setWindowPosition(x, y){

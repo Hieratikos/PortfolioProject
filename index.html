@@ -65,6 +65,7 @@
 <body>
 <!-- This is the modal window for the displayed images -->
 <div class="modal" id="myModal">
+    <!--"fa-close" is the "X" next to the map-->
     <span class="fa fa-close"></span>
     <img src="" id="imgContent" class="modal-content"/>
     <div id="imgCaption"></div>
@@ -116,7 +117,7 @@
                 </a>
                 </div>
                 <div class="col sidebar_social-icons">
-                    <a href="#contact">
+                    <a href="#contact" onclick="setWindowPosition(window.scrollX, window.scrollY);">
                         <span class="faSize"><i class="fa fa-envelope"></i></span>
                     </a>
                 </div>
@@ -227,7 +228,7 @@
 
             <div id="item1">
                 <div class="left">
-                    <a href="#"><div class="button"><p>CLOSE &gt;&gt;</p></div></a>
+                    <div class="button"><p>CLOSE &gt;&gt;</p></div>
                     <h2>Earthquake Map</h2>
                     <p>
                         This map is a simple data visualization project that displays real-time earthquake data from
@@ -246,7 +247,7 @@
 
             <div id="item2">
                 <div class="left">
-                    <a href="#"><div class="button"><p>CLOSE &gt;&gt;</p></div></a>
+                    <div class="button"><p>CLOSE &gt;&gt;</p></div>
                     <h2>Shortest Path Algorithm</h2>
                     <p>
                         This was another project for a Coursera class from UCSD called <a href="https://www.coursera.org/learn/advanced-data-structures" target="_blank">
@@ -264,7 +265,7 @@
             </div>
             <div id="item3">
                 <div class="left">
-                    <a href="#"><div class="button"><p>CLOSE &gt;&gt;</p></div></a>
+                    <div class="button"><p>CLOSE &gt;&gt;</p></div>
                     <h2>ESL Mobile Movie Site</h2>
                     <p>
                         One of my careers is ESL, and I currently teach at Santa Monica College. I started a movie club for the ESL students, and after I realized my
@@ -282,7 +283,7 @@
             </div>
             <div id="item4">
                 <div class="left">
-                    <a href="#"><div class="button"><p>CLOSE &gt;&gt;</p></div></a>
+                    <div class="button"><p>CLOSE &gt;&gt;</p></div>
                     <h2>Random Quote Generator</h2>
                     <p>
                         A Random Quote Generator project as part of the projects for freeCodeCamp. The logic is a combination of AJAX and jQuery. The quote content
@@ -297,7 +298,7 @@
             </div>
             <div id="item5">
                 <div class="left">
-                    <a href="#"><div class="button"><p>CLOSE &gt;&gt;</p></div></a>
+                    <div class="button"><p>CLOSE &gt;&gt;</p></div>
                     <h2>Weather Report</h2>
                     <p>
                         A Weather Report project as part of the projects for freeCodeCamp. The app makes calls to the Google geocode and staticmap API's. The
@@ -313,7 +314,7 @@
             </div>
             <div id="item6">
                 <div class="left">
-                    <a href="#"><div class="button"><p>CLOSE &gt;&gt;</p></div></a>
+                    <div class="button"><p>CLOSE &gt;&gt;</p></div>
                     <h2>Wikipedia Page Viewer</h2>
                     <p>
                         A Wikipedia Page Viewing project as part of the projects for freeCodeCamp. I used AngularJS for the calls to the Wikipedia API. The user can
@@ -329,7 +330,7 @@
             </div>
             <div id="item7">
                 <div class="left">
-                    <a href="#"><div class="button"><p>CLOSE &gt;&gt;</p></div></a>
+                    <div class="button"><p>CLOSE &gt;&gt;</p></div>
                     <h2>Javascript Calculator</h2>
                     <p>
                         A Javascript Calculator project as part of the projects for freeCodeCamp. The code is simple jQuery. Very few bells and whistles. If I wanted
@@ -344,7 +345,7 @@
             </div>
             <div id="item8">
                 <div class="left">
-                    <a href="#"><div class="button"><p>CLOSE &gt;&gt;</p></div></a>
+                    <div class="button"><p>CLOSE &gt;&gt;</p></div>
                     <h2>Twitch TV Viewer</h2>
                     <p>
                         A Twitch TV API project as part of the projects for freeCodeCamp, and I only completed the minimum number of user stories since
@@ -359,7 +360,7 @@
             </div>
             <div id="item9">
                 <div class="left">
-                    <a href="#"><div class="button"><p>CLOSE &gt;&gt;</p></div></a>
+                    <div class="button"><p>CLOSE &gt;&gt;</p></div>
                     <h2>Pomodoro Clock</h2>
                     <p>
                         A Pomodoro Clock project as part of the projects for freeCodeCamp. I wanted to make it more visually appealing than a straightforward
@@ -374,7 +375,7 @@
             </div>
             <div id="item10">
                 <div class="left">
-                    <a href="#"><div class="button"><p>CLOSE &gt;&gt;</p></div></a>
+                    <div class="button"><p>CLOSE &gt;&gt;</p></div>
                     <h2>Tic Tac Toe</h2>
                     <p>
                         A Tic Tac Toe project as part of the projects for freeCodeCamp. The algorithm used to check for a win is based on a simple array structure.
@@ -390,7 +391,7 @@
             </div>
             <div id="item11">
                 <div class="left">
-                    <a href="#"><div class="button"><p>CLOSE &gt;&gt;</p></div></a>
+                    <div class="button"><p>CLOSE &gt;&gt;</p></div>
                     <h2>Simon Game</h2>
                     <p>
                         A Simon Game project as part of the projects for freeCodeCamp. The play sequence is for twenty turns. If strict mode is on, the game resets
@@ -406,7 +407,7 @@
             </div>
             <div id="item12">
                 <div class="left">
-                    <a href="#"><div class="button"><p>CLOSE &gt;&gt;</p></div></a>
+                    <div class="button"><p>CLOSE &gt;&gt;</p></div>
                     <h2>RGB Color Game</h2>
                     <p>
                         An RGB Color Picker game to test the user's knowledge of RGB values.
@@ -422,7 +423,7 @@
     </div>
 </div>
 <div id="contact">
-    <a href="#"><div class="button"><p>&lt;&lt; CLOSE</p></div></a>
+    <div class="button"><p>&lt;&lt; CLOSE</p></div>
     <form method="post" id="emailform" name="myemailform" action="test.php">
         <label for="name_id">Your Name</label><input type="text" id="name_id" name="name_name" autocomplete="fullname" placeholder="VIP" required/>
         <br />
