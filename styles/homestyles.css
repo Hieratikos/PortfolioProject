@@ -362,7 +362,6 @@ h1, h2, h3, h4, h5, h6 {
 /* ---------->>> Left Sidebar -- Begin <<<-----------*/
 /* ------------------------*/
 #sidebar {
-  padding: 40px 1%;
   text-align: center;
   color: #FF7E5F;
   font-family: "Cuadradex", sans-serif; }
@@ -734,9 +733,7 @@ also, add 2 to margin-top and margin-bottom for every additional hex added to a 
 .modal-content {
   margin: auto;
   display: block;
-  width: 85%;
-  animation-name: zoom;
-  animation-duration: 0.6s; }
+  width: 85%; }
 
 #myImg {
   border-radius: 5px;

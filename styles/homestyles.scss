@@ -14,8 +14,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 /* ------------------------*/ /* ---------->>> Left Sidebar -- Begin <<<-----------*/ /* ------------------------*/
 #sidebar {
-    padding: 40px 1%;
-    //background: linear-gradient(to right, rgba(53,28,77,1), rgba(73,44,94,1));
     text-align: center;
     color: $HEATWAVE;
     font-family: $fontHeadings;
@@ -389,8 +387,8 @@ also, add 2 to margin-top and margin-bottom for every additional hex added to a 
     margin: auto;
     display: block;
     width: 85%;
-    animation-name: zoom;
-    animation-duration: 0.6s;
+    //animation-name: zoom;
+    //animation-duration: 0.6s;
 }
 #myImg {
     border-radius: 5px;
