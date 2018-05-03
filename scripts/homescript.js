@@ -16,10 +16,14 @@ $(document).ready(function () {
     $(".fa-close").click(function () {
         $("#myModal")[0].style.display = "none";
     });
-    //close the modal with the escape key
-    document.addEventListener('keyup', function(e) {
-        if (e.keyCode === 27) {
-            $("#myModal")[0].style.display = "none";
+    //close the modal image with the escape key if it is open; otherwise, slide the panel back
+    window.addEventListener('keydown', function(e) {
+        if (e.code === "Escape") {
+            if ($("#myModal")[0].style.display === "block"){
+                $("#myModal")[0].style.display = "none";
+            }else{
+                location.href = "#";
+            }
         }
     });
 });
