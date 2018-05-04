@@ -737,6 +737,7 @@ also, add 2 to margin-top and margin-bottom for every additional hex added to a 
     .faSize : the fontawesome links on the left sidebar
     .projImgDetail : the images on the sliding panels that show the project details
     .projContent : the font size of the project detail description (also on the sliding panels)
+    .lineLeft/Right : this is the margin-bottom border for the divs that separate the hex logo. they bleed into the smaller resolutions by default.
  */
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -750,7 +751,10 @@ also, add 2 to margin-top and margin-bottom for every additional hex added to a 
     width: 50%; }
 
   .projContent {
-    font-size: 1rem; } }
+    font-size: 1rem; }
+
+  .lineLeft, .lineRight {
+    margin: 0 3.3%; } }
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
   .display-1 {
@@ -763,7 +767,10 @@ also, add 2 to margin-top and margin-bottom for every additional hex added to a 
     width: 50%; }
 
   .projContent {
-    font-size: 1.2rem; } }
+    font-size: 1.2rem; }
+
+  .lineLeft, .lineRight {
+    margin: 0 2.3%; } }
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   .display-1 {
@@ -776,7 +783,10 @@ also, add 2 to margin-top and margin-bottom for every additional hex added to a 
     width: 50%; }
 
   .projContent {
-    font-size: 1.3rem; } }
+    font-size: 1.3rem; }
+
+  .lineLeft, .lineRight {
+    margin: 0 1.8%; } }
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   .display-1 {
@@ -789,7 +799,10 @@ also, add 2 to margin-top and margin-bottom for every additional hex added to a 
     width: 50%; }
 
   .projContent {
-    font-size: 1.3rem; } }
+    font-size: 1.3rem; }
+
+  .lineLeft, .lineRight {
+    margin: 0 1.5%; } }
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   .display-1 {
@@ -802,6 +815,9 @@ also, add 2 to margin-top and margin-bottom for every additional hex added to a 
     width: 60%; }
 
   .projContent {
-    font-size: 1.5rem; } }
+    font-size: 1.5rem; }
+
+  .lineLeft, .lineRight {
+    margin: 0 1%; } }
 
 /*# sourceMappingURL=homestyles.css.map */
