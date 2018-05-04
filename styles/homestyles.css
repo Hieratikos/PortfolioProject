@@ -407,15 +407,8 @@ p.creds {
 .lineLeft, .lineRight {
   border-bottom: 1px solid #FF7E5F;
   width: 50%;
-  height: 50%; }
-
-.lineLeft {
-  float: left;
-  margin-left: 0; }
-
-.lineRight {
-  float: right;
-  margin-right: 0; }
+  height: 50%;
+  margin: 0 1%; }
 
 .rowLogo {
   flex-wrap: nowrap;
@@ -739,6 +732,12 @@ also, add 2 to margin-top and margin-bottom for every additional hex added to a 
 /* ------------------------*/
 /* ---------->>> Media Queries -- Begin <<<-----------*/
 /* ------------------------*/
+/* Media Query Classes:
+    .display-1 : the bootstrap header class for the title font
+    .faSize : the fontawesome links on the left sidebar
+    .projImgDetail : the images on the sliding panels that show the project details
+    .projContent : the font size of the project detail description (also on the sliding panels)
+ */
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .display-1 {
@@ -747,7 +746,7 @@ also, add 2 to margin-top and margin-bottom for every additional hex added to a 
   .faSize {
     font-size: 2em; }
 
-  #myImgQuake, #myImgAlg {
+  .projImgDetail {
     width: 50%; }
 
   .projContent {
@@ -760,7 +759,7 @@ also, add 2 to margin-top and margin-bottom for every additional hex added to a 
   .faSize {
     font-size: 3em; }
 
-  #myImgQuake, #myImgAlg {
+  .projImgDetail {
     width: 50%; }
 
   .projContent {
@@ -773,7 +772,7 @@ also, add 2 to margin-top and margin-bottom for every additional hex added to a 
   .faSize {
     font-size: 2.7em; }
 
-  #myImgQuake, #myImgAlg {
+  .projImgDetail {
     width: 50%; }
 
   .projContent {
@@ -786,7 +785,7 @@ also, add 2 to margin-top and margin-bottom for every additional hex added to a 
   .faSize {
     font-size: 3.5em; }
 
-  #myImgQuake, #myImgAlg {
+  .projImgDetail {
     width: 50%; }
 
   .projContent {
@@ -798,6 +797,9 @@ also, add 2 to margin-top and margin-bottom for every additional hex added to a 
 
   .faSize {
     font-size: 4em; }
+
+  .projImgDetail {
+    width: 60%; }
 
   .projContent {
     font-size: 1.5rem; } }

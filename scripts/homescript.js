@@ -28,18 +28,23 @@ $(document).ready(function () {
             }
         }
     });
-    $("#quakeLink").on("click", setPanelImageMargin());
-    $("#algLink").on("click", setPanelImageMargin());
+    $("#grid li a").on("click", function(e){
+        setPanelImageMargin();
+    });
 });
 //the window's resize event has to be bound outside of the document.ready so the margin doesn't get set prematurely
-$(window).on("resize", function(){
+$(window).on("resize", function(e){
     setPanelImageMargin();
 });
+// var x = 0;
+// function printTest(e) {
+//     console.log(e);
+// }
+
 //setPanelImageMargin makes images on a sliding div responsive when they couldn't be otherwise
 //media queries change the widths so the effect is seamless.
 function setPanelImageMargin(){
-    $("#myImgQuake").css("margin-left", ($(window).width() - $("#myImgQuake").width())/2);
-    $("#myImgAlg").css("margin-left", ($(window).width() - $("#myImgAlg").width())/2);
+    $(".projImgDetail").css("margin-left", ($(window).width() - $(".projImgDetail").width())/2);
 }
 
 //email submit
