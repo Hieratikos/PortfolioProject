@@ -541,7 +541,7 @@ p.creds{
 .target-1 {
     top: 24%;
     left: 20%;
-    -webkit-animation: 3s blink infinite 2.65s;
+    animation: 3s blink infinite 2.65s;
 }
 @-webkit-keyframes blink {
     0% {

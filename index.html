@@ -19,48 +19,6 @@
             crossorigin="anonymous"></script>
     <script defer type="text/javascript" src="scripts/homescript.js"></script>
 
-    <script>
-        // $(function() {
-        //
-        //
-        //     $(window).bind('exitBreakpoint320',function() {
-        //         $('#log').append('<p>Exiting 320 breakpoint</p>');
-        //     });
-        //     $(window).bind('enterBreakpoint320',function() {
-        //         $('#log').append('<p>Entering 320 breakpoint</p>');
-        //     });
-        //
-        //     $(window).bind('exitBreakpoint480',function() {
-        //         $('#log').append('<p>Exiting 480 breakpoint</p>');
-        //     });
-        //     $(window).bind('enterBreakpoint480',function() {
-        //         $('#log').append('<p>Entering 480 breakpoint</p>');
-        //     });
-        //     $(window).bind('exitBreakpoint768',function() {
-        //         $('#log').append('<p>Exiting 768 breakpoint</p>');
-        //     });
-        //     $(window).bind('enterBreakpoint768',function() {
-        //         $('#log').append('<p>Entering 768 breakpoint</p>');
-        //     });
-        //
-        //     $(window).bind('exitBreakpoint1024',function() {
-        //         $('#log').append('<p>Exiting 1024 breakpoint</p>');
-        //     });
-        //     $(window).bind('enterBreakpoint1024',function() {
-        //         $('#log').append('<p>Entering 1024 breakpoint</p>');
-        //     });
-        //
-        //     $(window).setBreakpoints();
-        //
-        //     $('#distinct').bind('click',function() {
-        //         $(window).resetBreakpoints();
-        //         $(window).setBreakpoints({distinct: $('#distinct').is(":checked")});
-        //         $(window).resize();
-        //     });
-        //
-        // });
-    </script>
-
 </head>
 <body>
 <!-- This is the modal window for the displayed images -->
@@ -124,12 +82,12 @@
             </div>
         </div>
 
-        <!-- The hex's -->
+        <!-- The hexes -->
         <div class="col-md-9 col-sm-8 col-xs-9">
             <!--everything below represents the main content area for each hex display-->
             <ul id="grid" class="clear">
                 <li>
-                    <a href="#item1">
+                    <a href="#item1" id="quakeLink">
                         <div class="hexagon">
                             <img src="images/EarthquakeMapColorized.webp" alt="Earthquake Map"/>
                             <div class="overlay">Data Visualization Earthquake Map</div>
@@ -137,7 +95,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#item2">
+                    <a href="#item2" id="algLink">
                         <div class="hexagon">
                             <img src="images/ShortestPathColorized.webp" alt="Shortest Path Algorithm"/>
                             <div class="overlay">Shortest Path Algorithm</div>
@@ -227,39 +185,50 @@
             </ul>
 
             <div id="item1">
-                <div class="left">
-                    <div class="button"><p>CLOSE &gt;&gt;</p></div>
-                    <h2>Earthquake Map</h2>
-                    <p>
-                        This map is a simple data visualization project that displays real-time earthquake data from
-                        an Atom feed at the <a href="https://earthquake.usgs.gov/" target="_blank">U.S. Geological Society</a>. The map(s) come
-                        from <a href="http://unfoldingmaps.org/" target="_blank">Unfolding Maps</a>, and the legend and graphics are made with
-                        <a href="https://processing.org/" target="_blank">Processing 2.0</a>. This project was part of the coursework of a Coursera
-                        Java class called <a href="https://www.coursera.org/learn/data-structures-optimizing-performance" target="_blank">Data Structures and Performance</a>
-                        offered by UCSD.
-                    </p>
-                </div>
+                <span class="button">CLOSE &gt;&gt;</span>
+                <section class="projContent">
+                    <h1>Earthquake Map</h1>
+                    This map is a simple data visualization project that displays real-time earthquake data from
+                    an Atom feed at the <a href="https://earthquake.usgs.gov/" target="_blank">U.S. Geological Society</a>. The map(s) come
+                    from <a href="http://unfoldingmaps.org/" target="_blank">Unfolding Maps</a>, and the legend and graphics are made with
+                    <a href="https://processing.org/" target="_blank">Processing 2.0</a>. This project was part of the coursework of a Coursera
+                    Java class called <a href="https://www.coursera.org/learn/data-structures-optimizing-performance" target="_blank">Data Structures and Performance</a>
+                    offered by UCSD.
+                </section>
 
-                <div class="right">
+                <!--The line-splitting hex logo-->
+                <div class="row rowLogo">
+                    <div class="lineLeft">&nbsp;</div>
+                    <img class="lineImgTitle" src="images/HeatwaveLogo.webp">
+                    <div class="lineRight">&nbsp;</div>
+                </div>
+<!--Try a Bootstrap panel here-->
+                <div class="projImg">
                     <img id="myImgQuake" src="images/EarthquakeMap_half.webp" alt="Earthquake Map"/>
                 </div>
+
             </div>
 
             <div id="item2">
-                <div class="left">
-                    <div class="button"><p>CLOSE &gt;&gt;</p></div>
-                    <h2>Shortest Path Algorithm</h2>
-                    <p>
-                        This was another project for a Coursera class from UCSD called <a href="https://www.coursera.org/learn/advanced-data-structures" target="_blank">
-                        Advanced Data Structures in Java</a>. Google Maps were used to extract data points that were parsed into intersection points, and shortest
-                        path algorithms were used to find the shortest route between two points. Algorithms for this project included BFS, Dijkstra, and A*.
-                    </p>
-                    <p>I also created a modified version that took speed limits into account and generated the fastest route between two points. Since speed
-                        limit data is unavailable for free, I identified road segments as per
-                        <a href="http://wiki.openstreetmap.org/wiki/Main_Page" target="_blank">Open Street Map</a> and assigned approximate speeds per segment.
-                    </p>
+                <span class="button">CLOSE &gt;&gt;</span>
+                <section class="projContent">
+                <h1>Shortest Path Algorithm</h1>
+                    <p>This was another project for a Coursera class from UCSD called <a href="https://www.coursera.org/learn/advanced-data-structures" target="_blank">
+                    Advanced Data Structures in Java</a>. Google Maps were used to extract data points that were parsed into intersection points, and shortest
+                        path algorithms were used to find the shortest route between two points. Algorithms for this project included BFS, Dijkstra, and A*.</p>
+                <p>I also created a modified version that took speed limits into account and generated the fastest route between two points. Since speed
+                    limit data is unavailable for free, I identified road segments as per
+                    <a href="http://wiki.openstreetmap.org/wiki/Main_Page" target="_blank">Open Street Map</a> and assigned approximate speeds per segment.</p>
+                </section>
+
+                <!--The line-splitting hex logo-->
+                <div class="row rowLogo">
+                    <div class="lineLeft">&nbsp;</div>
+                    <img class="lineImgTitle" src="images/HeatwaveLogo.webp">
+                    <div class="lineRight">&nbsp;</div>
                 </div>
-                <div class="right">
+
+                <div class="projImg">
                     <img id="myImgAlg" src="images/ShortestPath_half.webp" alt="Shortest Path Algorithm"/>
                 </div>
             </div>
@@ -439,9 +408,6 @@
         <input type="submit" class="button" name="submit" value="submit"/>
     </form>
 </div>
-<!--The "log" below is output for the "breakpoints.js" code and the script embedded above in the <head> section. Delete when finished playing around. -->
-<div id="log">
 
-</div>
 </body>
 </html>

@@ -80,19 +80,20 @@ p.creds{
     will-change: transform;
 }
 .radar .pointer {
+    //do not delete the commented lines below in case I want to modify the design
     position: absolute;
     left: -1.5820106%;
     right: -1.5820106%;
     top: -1.5820106%;
     bottom: 50%;
     transform-origin: 50% 100%;
-    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    //border-radius: 50% 50% 0 0 / 100% 100% 0 0;
     background-image: linear-gradient(135deg,
             rgba($SUNSET, .8) 0%,
             rgba($SUNSET, .02) 70%,
             rgba($SUNSET, 0) 100%
     );
-    clip-path: polygon(100% 0%, 100% 10%, 50% 100%, 0 100%, 0 0);
+    //clip-path: polygon(100% 0%, 100% 10%, 50% 100%, 0 100%, 0 0);
     animation: rotate360 3s infinite linear;
 }
 @keyframes rotate360 {
@@ -193,9 +194,10 @@ p.creds{
 
 /* ------------------------*/ /* ---------->>> GRID -- Begin <<<-----------*/ /* ------------------------*/
 #item1, #item2, #item3, #item4, #item5, #item6, #item7, #item8, #item9, #item10, #item11, #item12, #item13, #item14, #item15 {
-    overflow: hidden;
-    z-index: 3;
-    display: block;
+  //TODO: delete overflow, z-index & display settings if you don't see any problems after testing
+    //overflow: hidden;
+    //z-index: 3;
+    //display: block;
     position: fixed;
     top: 0;
     right: -100%;
@@ -231,7 +233,7 @@ p.creds{
 /* the parallelogram */
 #grid li{
     list-style-type: none;
-    position: relative;
+    //position: relative;
     float: left;
     /* width = padding * 0.866 {Math.sin(60/180*Math.PI):the 60 is the degrees, and Math.sin() returns radians} -- if adding another hex to a row */
     /* width = 83.571428/numOfHexs for % */
@@ -242,7 +244,7 @@ p.creds{
     /* padding: 0 0 24.125701% 0; */
     transform: rotate(-60deg) skewY(30deg);
     overflow: hidden;
-    visibility: hidden;
+    //visibility: hidden;
 }
 #grid li *{
     visibility: visible;
@@ -319,34 +321,50 @@ also, add 2 to margin-top and margin-bottom for every additional hex added to a 
     margin-left:0.5%;
 }
 */
-.clear:after{
-    content:"";
-    display: block;
-    clear: both;
-}
+//.clear:after{
+//    content:"";
+//    display: block;
+//    clear: both;
+//}
 /* ------------------------*/ /* ---------->>> GRID -- End <<<-----------*/ /* ------------------------*/
 
 /* ------------------------*/ /* ---------->>> Modal Detail Display -- Begin <<<-----------*/ /* ------------------------*/
-.left, .right {
-    position: absolute;
-    height: 100%;
-    width: 50%;
-    overflow: auto;
-    background: none;
-    border-style: dashed;
-    border-color: $NIGHTFALL;
-    border-width: thin;
+//.left, .right {
+//    position: absolute;
+//    height: 100%;
+//    width: 50%;
+//    overflow: auto;
+//    background: none;
+//    border-style: dashed;
+//    border-color: $NIGHTFALL;
+//    border-width: thin;
+//}
+//.right {
+//    left: 50%;
+//    overflow: auto;
+//}
+//.right img {
+//    height: auto;
+//    width: 100%;
+//    margin-left: .1em;
+//    margin-top: .1em;
+//}
+.left{
+
 }
-.right {
-    left: 50%;
-    overflow: auto;
+.projContent{
+    font-size: 1.5rem;
+    padding-left: 10%;
+    padding-right: 10%;
 }
-.right img {
-    height: auto;
-    width: 100%;
-    margin-left: .1em;
-    margin-top: .1em;
+.projContent > h1{
+    font-size: 3rem;
+    text-align: center;
 }
+.projImg{
+
+}
+
 .rightVert{
     height:100% !important;
     width:auto !important;
@@ -356,14 +374,16 @@ also, add 2 to margin-top and margin-bottom for every additional hex added to a 
     display: inline-block;
     //height: auto;
     //width: auto;
-    padding: 15px 15px 0 15px;
-    border-radius: 10px;
-    margin: 1em;
+    //padding: 15px 15px 0 15px;
+    //border-radius: 10px;
+    //margin: 1em;
     transition: all 0.3s linear 0s;
     background: $SUNSET;
+    //float: left;
 }
 .button:hover {
     background: $HEATWAVE;
+    cursor: pointer;
 }
 .modal {
     display: none; /* Hidden by default */
@@ -385,20 +405,24 @@ also, add 2 to margin-top and margin-bottom for every additional hex added to a 
     //animation-name: zoom;
     //animation-duration: 0.6s;
 }
-#myImg {
-    border-radius: 5px;
+//#myImg {
+//    border-radius: 5px;
+//    cursor: pointer;
+//    transition: 0.3s;
+//}
+//#myImg:hover {
+//    opacity: 0.7;
+//}
+//#myImgQuake{
+//    width:100%;
+//    height: auto;
+//}
+#myImgQuake:hover, #myImgAlg:hover{
     cursor: pointer;
-    transition: 0.3s;
 }
-#myImg:hover {
-    opacity: 0.7;
-}
-#myImgQuake:hover{
-    cursor: pointer;
-}
-#myImgAlg:hover{
-    cursor: pointer;
-}
+//#myImgAlg:hover{
+//    cursor: pointer;
+//}
 /* Caption of Modal Image (Image Text) - Same Width as the Image */
 #imgCaption {
     margin: auto;
@@ -436,6 +460,12 @@ also, add 2 to margin-top and margin-bottom for every additional hex added to a 
     .faSize{
         font-size: 2em;
     }
+    #myImgQuake, #myImgAlg{
+        width:50%;
+    }
+    .projContent{
+        font-size: 1rem;
+    }
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
@@ -445,6 +475,12 @@ also, add 2 to margin-top and margin-bottom for every additional hex added to a 
     }
     .faSize{
         font-size: 3em;
+    }
+    #myImgQuake, #myImgAlg{
+        width:50%;
+    }
+    .projContent{
+        font-size: 1.2rem;
     }
 }
 /* Medium devices (landscape tablets, 768px and up) */
@@ -456,6 +492,12 @@ also, add 2 to margin-top and margin-bottom for every additional hex added to a 
     .faSize{
         font-size: 2.7em;
     }
+    #myImgQuake, #myImgAlg{
+        width:50%;
+    }
+    .projContent{
+        font-size: 1.3rem;
+    }
 }
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
@@ -466,6 +508,12 @@ also, add 2 to margin-top and margin-bottom for every additional hex added to a 
     .faSize{
         font-size: 3.5em;
     }
+    #myImgQuake, #myImgAlg{
+        width:50%;
+    }
+    .projContent{
+        font-size: 1.3rem;
+    }
 }
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
@@ -475,5 +523,8 @@ also, add 2 to margin-top and margin-bottom for every additional hex added to a 
     }
     .faSize{
         font-size: 4em;
+    }
+    .projContent{
+        font-size: 1.5rem;
     }
 }

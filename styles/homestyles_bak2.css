@@ -666,8 +666,7 @@ label {
   font-family: "Cuadradex", sans-serif;
   color: #FF7E5F;
   font-size: 4.5vmin;
-  /*line-height: 1.8em;*/
-  }
+  /*line-height: 1.8em;*/ }
 
 p.creds {
   color: #FF7E5F;
@@ -871,7 +870,7 @@ p.creds {
 .target-1 {
   top: 24%;
   left: 20%;
-  -webkit-animation: 3s blink infinite 2.65s; }
+  animation: 3s blink infinite 2.65s; }
 
 @-webkit-keyframes blink {
   0% {
@@ -879,4 +878,4 @@ p.creds {
   100% {
     opacity: 0; } }
 
-/*# sourceMappingURL=homestyles_bak2.css2.css.map */
+/*# sourceMappingURL=homestyles_bak2.css.map */

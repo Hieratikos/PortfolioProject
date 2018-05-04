@@ -437,9 +437,7 @@ p.creds {
   top: -1.5820106%;
   bottom: 50%;
   transform-origin: 50% 100%;
-  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
   background-image: linear-gradient(135deg, rgba(254, 180, 123, 0.8) 0%, rgba(254, 180, 123, 0.02) 70%, rgba(254, 180, 123, 0) 100%);
-  clip-path: polygon(100% 0%, 100% 10%, 50% 100%, 0 100%, 0 0);
   animation: rotate360 3s infinite linear; }
 
 @keyframes rotate360 {
@@ -536,9 +534,6 @@ p.creds {
 /* ---------->>> GRID -- Begin <<<-----------*/
 /* ------------------------*/
 #item1, #item2, #item3, #item4, #item5, #item6, #item7, #item8, #item9, #item10, #item11, #item12, #item13, #item14, #item15 {
-  overflow: hidden;
-  z-index: 3;
-  display: block;
   position: fixed;
   top: 0;
   right: -100%;
@@ -571,7 +566,6 @@ p.creds {
 /* the parallelogram */
 #grid li {
   list-style-type: none;
-  position: relative;
   float: left;
   /* width = padding * 0.866 {Math.sin(60/180*Math.PI):the 60 is the degrees, and Math.sin() returns radians} -- if adding another hex to a row */
   /* width = 83.571428/numOfHexs for % */
@@ -581,8 +575,7 @@ p.creds {
   padding: 0 0 32.16760145166612% 0;
   /* padding: 0 0 24.125701% 0; */
   transform: rotate(-60deg) skewY(30deg);
-  overflow: hidden;
-  visibility: hidden; }
+  overflow: hidden; }
 
 #grid li * {
   visibility: visible; }
@@ -659,36 +652,20 @@ also, add 2 to margin-top and margin-bottom for every additional hex added to a 
     margin-left:0.5%;
 }
 */
-.clear:after {
-  content: "";
-  display: block;
-  clear: both; }
-
 /* ------------------------*/
 /* ---------->>> GRID -- End <<<-----------*/
 /* ------------------------*/
 /* ------------------------*/
 /* ---------->>> Modal Detail Display -- Begin <<<-----------*/
 /* ------------------------*/
-.left, .right {
-  position: absolute;
-  height: 100%;
-  width: 50%;
-  overflow: auto;
-  background: none;
-  border-style: dashed;
-  border-color: #351C4D;
-  border-width: thin; }
+.projContent {
+  font-size: 1.5rem;
+  padding-left: 10%;
+  padding-right: 10%; }
 
-.right {
-  left: 50%;
-  overflow: auto; }
-
-.right img {
-  height: auto;
-  width: 100%;
-  margin-left: .1em;
-  margin-top: .1em; }
+.projContent > h1 {
+  font-size: 3rem;
+  text-align: center; }
 
 .rightVert {
   height: 100% !important;
@@ -697,14 +674,12 @@ also, add 2 to margin-top and margin-bottom for every additional hex added to a 
 
 .button {
   display: inline-block;
-  padding: 15px 15px 0 15px;
-  border-radius: 10px;
-  margin: 1em;
   transition: all 0.3s linear 0s;
   background: #FEB47B; }
 
 .button:hover {
-  background: #FF7E5F; }
+  background: #FF7E5F;
+  cursor: pointer; }
 
 .modal {
   display: none;
@@ -730,18 +705,7 @@ also, add 2 to margin-top and margin-bottom for every additional hex added to a 
   display: block;
   width: 85%; }
 
-#myImg {
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s; }
-
-#myImg:hover {
-  opacity: 0.7; }
-
-#myImgQuake:hover {
-  cursor: pointer; }
-
-#myImgAlg:hover {
+#myImgQuake:hover, #myImgAlg:hover {
   cursor: pointer; }
 
 /* Caption of Modal Image (Image Text) - Same Width as the Image */
@@ -781,34 +745,61 @@ also, add 2 to margin-top and margin-bottom for every additional hex added to a 
     font-size: 2rem; }
 
   .faSize {
-    font-size: 2em; } }
+    font-size: 2em; }
+
+  #myImgQuake, #myImgAlg {
+    width: 50%; }
+
+  .projContent {
+    font-size: 1rem; } }
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
   .display-1 {
     font-size: 3rem; }
 
   .faSize {
-    font-size: 3em; } }
+    font-size: 3em; }
+
+  #myImgQuake, #myImgAlg {
+    width: 50%; }
+
+  .projContent {
+    font-size: 1.2rem; } }
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   .display-1 {
     font-size: 6rem; }
 
   .faSize {
-    font-size: 2.7em; } }
+    font-size: 2.7em; }
+
+  #myImgQuake, #myImgAlg {
+    width: 50%; }
+
+  .projContent {
+    font-size: 1.3rem; } }
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   .display-1 {
     font-size: 6rem; }
 
   .faSize {
-    font-size: 3.5em; } }
+    font-size: 3.5em; }
+
+  #myImgQuake, #myImgAlg {
+    width: 50%; }
+
+  .projContent {
+    font-size: 1.3rem; } }
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   .display-1 {
     font-size: 6rem; }
 
   .faSize {
-    font-size: 4em; } }
+    font-size: 4em; }
+
+  .projContent {
+    font-size: 1.5rem; } }
 
 /*# sourceMappingURL=homestyles.css.map */

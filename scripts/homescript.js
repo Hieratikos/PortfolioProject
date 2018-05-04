@@ -16,6 +16,7 @@ $(document).ready(function () {
     $(".fa-close").click(function () {
         $("#myModal")[0].style.display = "none";
     });
+
     //close the modal image with the escape key if it is open; otherwise, slide the panel back
     window.addEventListener('keydown', function(e) {
         if (e.code === "Escape") {
@@ -27,7 +28,20 @@ $(document).ready(function () {
             }
         }
     });
+    $("#quakeLink").on("click", setPanelImageMargin());
+    $("#algLink").on("click", setPanelImageMargin());
 });
+//the window's resize event has to be bound outside of the document.ready so the margin doesn't get set prematurely
+$(window).on("resize", function(){
+    setPanelImageMargin();
+});
+//setPanelImageMargin makes images on a sliding div responsive when they couldn't be otherwise
+//media queries change the widths so the effect is seamless.
+function setPanelImageMargin(){
+    $("#myImgQuake").css("margin-left", ($(window).width() - $("#myImgQuake").width())/2);
+    $("#myImgAlg").css("margin-left", ($(window).width() - $("#myImgAlg").width())/2);
+}
+
 //email submit
 function confirmMsg() {
     alert("Thank you for your interest. This page is under construction.");
