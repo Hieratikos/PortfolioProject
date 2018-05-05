@@ -11,6 +11,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: $fontHeadings;
     color: $HEATWAVE;
     text-align: center;
+    text-shadow: -.2rem .2rem $NIGHTFALL;
 }
 /* ------------------------*/ /* ---------->>> Left Sidebar -- Begin <<<-----------*/ /* ------------------------*/
 #sidebar {
@@ -430,12 +431,12 @@ also, add 2 to margin-top and margin-bottom for every additional hex added to a 
  */
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    body {background: red;}
+    //body {background: red;}
     .display-1{
-        font-size: 2rem;
+        font-size: 2.3rem;
     }
     .faSize{
-        font-size: 2em;
+        font-size: 3em;
     }
     .projImgDetail{
         width:50%;
@@ -449,7 +450,7 @@ also, add 2 to margin-top and margin-bottom for every additional hex added to a 
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-    body {background: green;}
+    //body {background: green;}
     .display-1{
         font-size: 3rem;
     }
@@ -468,7 +469,7 @@ also, add 2 to margin-top and margin-bottom for every additional hex added to a 
 }
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    body {background: blue;}
+    //body {background: blue;}
     .display-1{
         font-size: 6rem;
     }
@@ -487,7 +488,7 @@ also, add 2 to margin-top and margin-bottom for every additional hex added to a 
 }
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    body {background: orange;}
+    //body {background: orange;}
     .display-1{
         font-size: 6rem;
     }
@@ -509,7 +510,7 @@ also, add 2 to margin-top and margin-bottom for every additional hex added to a 
 }
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-    body {background: pink;}
+    //body {background: pink;}
     .display-1{
         font-size: 6rem;
     }
