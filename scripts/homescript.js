@@ -45,6 +45,7 @@ $(window).on("resize", function(e){
 //media queries change the widths so the effect is seamless.
 function setPanelImageMargin(){
     $(".projImgDetail").css("margin-left", ($(window).width() - $(".projImgDetail").width())/2);
+    $("#vertEslImg").css("margin-left", ($(window).width() - $("#vertEslImg").width())/2);
 }
 
 //email submit

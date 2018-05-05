@@ -524,7 +524,7 @@ p.creds {
 /* ---------->>> Contact Form -- End <<<-----------*/
 /* ------------------------*/
 /* ------------------------*/
-/* ---------->>> GRID -- Begin <<<-----------*/
+/* ---------->>> Sliding Project Detail Panel -- Begin <<<-----------*/
 /* ------------------------*/
 #item1, #item2, #item3, #item4, #item5, #item6, #item7, #item8, #item9, #item10, #item11, #item12, #item13, #item14, #item15 {
   position: fixed;
@@ -542,6 +542,12 @@ p.creds {
   transition: transform 0.6s linear 0s, height 0s linear 0s;
   transform: translateZ(0) translateX(-100%); }
 
+/* ------------------------*/
+/* ---------->>> Sliding Project Detail Panel -- Begin <<<-----------*/
+/* ------------------------*/
+/* ------------------------*/
+/* ---------->>> GRID -- Begin <<<-----------*/
+/* ------------------------*/
 .overlay {
   background: linear-gradient(to right, #FF7E5F, #FEB47B);
   padding: 50% 2% 2% 2%;
@@ -741,6 +747,9 @@ also, add 2 to margin-top and margin-bottom for every additional hex added to a 
  */
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+  body {
+    background: red; }
+
   .display-1 {
     font-size: 2rem; }
 
@@ -757,6 +766,9 @@ also, add 2 to margin-top and margin-bottom for every additional hex added to a 
     margin: 0 3.3%; } }
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+  body {
+    background: green; }
+
   .display-1 {
     font-size: 3rem; }
 
@@ -773,6 +785,9 @@ also, add 2 to margin-top and margin-bottom for every additional hex added to a 
     margin: 0 2.3%; } }
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+  body {
+    background: blue; }
+
   .display-1 {
     font-size: 6rem; }
 
@@ -789,6 +804,9 @@ also, add 2 to margin-top and margin-bottom for every additional hex added to a 
     margin: 0 1.8%; } }
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+  body {
+    background: orange; }
+
   .display-1 {
     font-size: 6rem; }
 
@@ -802,9 +820,15 @@ also, add 2 to margin-top and margin-bottom for every additional hex added to a 
     font-size: 1.3rem; }
 
   .lineLeft, .lineRight {
-    margin: 0 1.5%; } }
+    margin: 0 1.5%; }
+
+  #vertEslImg {
+    width: 40%; } }
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+  body {
+    background: pink; }
+
   .display-1 {
     font-size: 6rem; }
 
@@ -818,6 +842,9 @@ also, add 2 to margin-top and margin-bottom for every additional hex added to a 
     font-size: 1.5rem; }
 
   .lineLeft, .lineRight {
-    margin: 0 1%; } }
+    margin: 0 1%; }
+
+  #vertEslImg {
+    width: 30%; } }
 
 /*# sourceMappingURL=homestyles.css.map */
