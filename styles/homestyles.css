@@ -403,7 +403,9 @@ p.creds {
 
 .lineImgTitle {
   padding: 5px 5px;
-  display: inline-block; }
+  display: inline-block;
+  height: 3em;
+  width: 3em; }
 
 .lineLeft, .lineRight {
   border-bottom: 1px solid #FF7E5F;
@@ -547,7 +549,7 @@ p.creds {
 /* ---------->>> Sliding Project Detail Panel -- Begin <<<-----------*/
 /* ------------------------*/
 /* ------------------------*/
-/* ---------->>> GRID -- Begin <<<-----------*/
+/* ---------->>> HEX GRID -- Begin <<<-----------*/
 /* ------------------------*/
 .overlay {
   background: linear-gradient(to right, #FF7E5F, #FEB47B);
@@ -555,7 +557,6 @@ p.creds {
   color: #351C4D;
   font-family: "Montserrat Alternates", sans-serif;
   text-align: center;
-  /*font-size: x-large;*/
   font-size: 1.5vmax;
   font-weight: 100;
   text-shadow: -2px 2px 4px #765285; }
@@ -653,7 +654,7 @@ also, add 2 to margin-top and margin-bottom for every additional hex added to a 
 }
 */
 /* ------------------------*/
-/* ---------->>> GRID -- End <<<-----------*/
+/* ---------->>> HEX GRID -- End <<<-----------*/
 /* ------------------------*/
 /* ------------------------*/
 /* ---------->>> Modal Detail Display -- Begin <<<-----------*/
@@ -684,11 +685,8 @@ also, add 2 to margin-top and margin-bottom for every additional hex added to a 
 .modal {
   display: none;
   /* Hidden by default */
-  /*position: fixed; !* Stay in place *!*/
   z-index: 4;
-  /* Sit on top */
   padding-top: 1%;
-  /* Location of the box */
   left: 0;
   top: 0;
   width: 100%;

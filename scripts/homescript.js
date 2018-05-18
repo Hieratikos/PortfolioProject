@@ -5,12 +5,12 @@ $(document).ready(function () {
     $("#myImgQuake").click(function () {
         $("#myModal")[0].style.display = "block";
         // $("#imgContent")[0].src = $("#myImgQuake")[0].src;
-        $("#imgContent")[0].src = "images/EarthquakeMap.webp";
+        $("#imgContent")[0].src = "images/EarthquakeMap.jpg";
         $("#imgCaption").html($("#myImgQuake")[0].alt);
     });
     $("#myImgAlg").click(function () {
         $("#myModal")[0].style.display = "block";
-        $("#imgContent")[0].src = "images/ShortestPath_full.webp";
+        $("#imgContent")[0].src = "images/ShortestPath.jpg";
         $("#imgCaption").html($("#myImgAlg")[0].alt);
     });
     $(".fa-close").click(function () {
