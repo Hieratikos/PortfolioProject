@@ -44,8 +44,8 @@ $(window).on("resize", function(e){
 //setPanelImageMargin makes images on a sliding div responsive when they couldn't be otherwise
 //media queries change the widths so the effect is seamless.
 function setPanelImageMargin(){
-    $(".projImgDetail").css("margin-left", ($(window).width() - $(".projImgDetail").width())/2);
     $("#vertEslImg").css("margin-left", ($(window).width() - $("#vertEslImg").width())/2);
+    $(".projImgDetail").css("margin-left", ($(window).width() - $(".projImgDetail").width())/2);
 }
 
 //email submit
