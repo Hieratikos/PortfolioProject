@@ -1,87 +1,101 @@
 /**
  * Created by Admin on 5/11/2017.
  */
-$(document).ready(function () {
-    $("#myImgQuake").click(function () {
-        $("#myModal")[0].style.display = "block";
-        // $("#imgContent")[0].src = $("#myImgQuake")[0].src;
-        $("#imgContent")[0].src = "images/EarthquakeMap.jpg";
-        $("#imgCaption").html($("#myImgQuake")[0].alt);
-    });
-    $("#myImgAlg").click(function () {
-        $("#myModal")[0].style.display = "block";
-        $("#imgContent")[0].src = "images/ShortestPath.jpg";
-        $("#imgCaption").html($("#myImgAlg")[0].alt);
-    });
-    $(".fa-close").click(function () {
-        $("#myModal")[0].style.display = "none";
+(function() {
+    const   imgQuake = document.querySelector("#imgQuake"),
+            modalPanel = document.querySelector("#modalPanel"),
+            imgContent = document.querySelector("#imgContent"),
+            imgCaption = document.querySelector("#imgCaption"),
+            imgAlg = document.querySelector("#imgAlg"),
+            btnClose = document.querySelector("#btnClose"),
+            vertEslImg = document.querySelector("#vertEslImg"),
+            PROJ_IMG_DETAIL_LIST = document.querySelectorAll(".projImgDetail"),
+            HEX_COVER_LIST = document.querySelectorAll("#grid li a"),
+            CLOSE_PANEL_BUTTON_LIST = document.querySelectorAll(".button"),
+            SET_WINDOW_COORDS_HEXES = document.querySelectorAll(".overlay");
+    //x & y are the window position coordinates (initialized)
+    let x = 0,
+        y = 0;
+
+    //imgQuake is the image of the earthquake map (since I don't have a site for it)
+    imgQuake.addEventListener("click", function () {
+        modalPanel.style.display = "block";
+        imgContent.src = "images/EarthquakeMap.jpg";
+        imgCaption.innerHTML = imgQuake.alt;
     });
 
-    //close the modal image with the escape key if it is open; otherwise, slide the panel back
-    window.addEventListener('keydown', function(e) {
+    //imgAlg is the image of the algorithm map (also since I don't have a site for it)
+    imgAlg.addEventListener("click", function () {
+        modalPanel.style.display = "block";
+        imgContent.src = "images/ShortestPath.jpg";
+        imgCaption.innerHTML = imgAlg.alt;
+    });
+
+    //btnClose is the big font-awesome "X" on the earthquake and algorithm image panels displays
+    btnClose.addEventListener("click", function () {
+        modalPanel.style.display = "none";
+    });
+
+    //so the user can hit the escape key to close the sliding panels
+    window.addEventListener('keydown', function (e) {
         if (e.code === "Escape") {
-            if ($("#myModal")[0].style.display === "block"){
-                $("#myModal")[0].style.display = "none";
-            }else{
+            if (modalPanel.style.display === "block") {
+                modalPanel.style.display = "none";
+            } else {
                 location.href = "#";
                 scrollToWindowPosition(e);
             }
         }
     });
-    $("#grid li a").on("click", function(e){
-        setPanelImageMargin();
-    });
-});
-//the window's resize event has to be bound outside of the document.ready so the margin doesn't get set prematurely
-$(window).on("resize", function(e){
-    setPanelImageMargin();
-});
-// var x = 0;
-// function printTest(e) {
-//     console.log(e);
-// }
 
-//setPanelImageMargin makes images on a sliding div responsive when they couldn't be otherwise
-//media queries change the widths so the effect is seamless.
-function setPanelImageMargin(){
-    $("#vertEslImg").css("margin-left", ($(window).width() - $("#vertEslImg").width())/2);
-    $(".projImgDetail").css("margin-left", ($(window).width() - $(".projImgDetail").width())/2);
-}
-
-//email submit
-function confirmMsg() {
-    alert("Thank you for your interest. This page is under construction.");
-    location.href = location.pathname;
-    location.href = "#";
-}
-
-//target all the "CLOSE >>" buttons on the transition panels
-const CLOSE_PANEL_BUTTON_LIST = document.querySelectorAll(".button");
-
-//target all the project hexes on the main page
-const SET_WINDOW_COORDS_HEXES = document.querySelectorAll(".overlay");
-var x = 0;
-var y = 0;
-
-//assign the "scrollToWindowPosition" function after the sliding transition has completed
-//this way, the hexes don't jump back to the top of the page after viewing the sliding detail panel
-CLOSE_PANEL_BUTTON_LIST.forEach(function(closebutton){
-    closebutton.addEventListener("click", function(e) {
-        location.href = "#";
-        scrollToWindowPosition();
-    });
-});
-
-//assign the current window coordinates to local variables every time the user clicks on one of the hexes
-SET_WINDOW_COORDS_HEXES.forEach(function(hex){
-    hex.addEventListener("click", function (e) {
-        setWindowPosition(window.scrollX, window.scrollY);
+    //to center the image on the sliding panel when the user clicks the hex for that project
+    HEX_COVER_LIST.forEach(function(hexCover){
+        hexCover.addEventListener("click", function (e) {
+            setPanelImageMargin(e);
         });
-});
-function scrollToWindowPosition(){
-    window.scrollTo(x, y);
+    });
+
+    //setPanelImageMargin makes images on a sliding div responsive when they couldn't be otherwise
+    //media queries change the widths so the effect is seamless.
+    function setPanelImageMargin(e) {
+        vertEslImg.style.marginLeft = ((window.innerWidth - vertEslImg.width)/2) + "px";
+        PROJ_IMG_DETAIL_LIST.forEach(function(projImgDetail){
+            projImgDetail.style.marginLeft = ((window.innerWidth - projImgDetail.width)/2) + "px";
+        });
+    }
+
+    //email submit
+    function confirmMsg() {
+        alert("Thank you for your interest. This page is under construction.");
+        location.href = location.pathname;
+        location.href = "#";
+    }
+
+    //assign the "scrollToWindowPosition" function after the sliding transition has completed
+    //this way, the hexes don't jump back to the top of the page after viewing the sliding detail panel
+    CLOSE_PANEL_BUTTON_LIST.forEach(function (closebutton) {
+        closebutton.addEventListener("click", function (e) {
+            location.href = "#";
+            scrollToWindowPosition();
+        });
+    });
+
+    //assign the current window coordinates to local variables every time the user clicks on one of the hexes
+    SET_WINDOW_COORDS_HEXES.forEach(function (hex) {
+        hex.addEventListener("click", function (e) {
+            setWindowPosition(window.scrollX, window.scrollY);
+        });
+    });
+
+})();
+
+//the window position functions are set outside the IIFE so the window doesn't reset to the default settings everytime the panels are clicked
+//retrieve the stored x & y coordinates of the window position
+function scrollToWindowPosition() {
+    window.scrollTo(this.x, this.y);
 }
-function setWindowPosition(x, y){
+//store the x & y coordinates of the window position
+function setWindowPosition(x, y) {
     this.x = x;
     this.y = y;
 }

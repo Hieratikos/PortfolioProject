@@ -727,7 +727,6 @@ also, add 2 to margin-top and margin-bottom for every additional hex added to a 
 
 .fa-close:hover,
 .fa-close:focus {
-  color: #351C4D;
   text-decoration: none;
   cursor: pointer; }
 
